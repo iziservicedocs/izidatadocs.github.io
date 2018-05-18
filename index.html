@@ -362,44 +362,38 @@
 <p>验证通过应答样例</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SUCCESS"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OK"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OK"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3171024302821001"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HELLO NAME"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"province"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DKI JAKARTA"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"JAKARTA PUSAT"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"district"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GAMBIR"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"village"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DURI PULO"</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="s2">"extra"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <blockquote>
 <p>验证不通过应答样例</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SUCCESS"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NOT"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NOT"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3171024302821001"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"THIS IS ANOTHER ONE"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"province"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DKI JAKARTA"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"JAKARTA PUSAT"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"district"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GAMBIR"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"village"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DURI PULO"</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="s2">"extra"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <blockquote>
 <p>人员未查到应答样例</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PERSON_NOT_FOUND"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"This person can’t be found in our system"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"extra"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PERSON_NOT_FOUND"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"This person can’t be found in our system"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http'>HTTP请求</h3>
 <p><code>POST http://api.izi.credit/api/v1/identitycheck</code></p>
@@ -427,19 +421,11 @@
 </tr>
 </thead><tbody>
 <tr>
-<td><code>code</code></td>
+<td><code>status</code></td>
 <td>状态码</td>
 </tr>
 <tr>
 <td><code>message</code></td>
-<td>对应状态码的补充信息说明</td>
-</tr>
-<tr>
-<td><code>extra</code></td>
-<td>额外信息，<em>供调试使用，可忽略</em></td>
-</tr>
-<tr>
-<td><code>data</code></td>
 <td><code>id</code>：身份证号码，<code>NIK</code></td>
 </tr>
 <tr>
@@ -471,8 +457,12 @@
 </tr>
 </thead><tbody>
 <tr>
-<td><code>SUCCESS</code></td>
-<td>查找成功，说明我们库中存在查询的<code>NIK</code>，<code>message</code>为<code>OK</code>说明比对一致</td>
+<td><code>OK</code></td>
+<td>查找成功，库中存在查询的<code>NIK</code>，且姓名比对一致</td>
+</tr>
+<tr>
+<td><code>NOT</code></td>
+<td>查找成功，库中存在查询的<code>NIK</code>，但姓名比对不一致</td>
 </tr>
 <tr>
 <td><code>PERSON_NOT_FOUND</code></td>
@@ -545,46 +535,38 @@
 <p>判定是同一个人应答样例</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OK"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SAME PERSON"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OK"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="s2">"similarity"</span><span class="p">:</span><span class="w"> </span><span class="mf">97.501</span><span class="p">,</span><span class="w">
     </span><span class="s2">"result"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SAME PERSON"</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="s2">"extra"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <blockquote>
 <p>判定不是同一个人应答样例</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OK"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NOT SAME PERSON"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OK"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="s2">"similarity"</span><span class="p">:</span><span class="w"> </span><span class="mf">27.501</span><span class="p">,</span><span class="w">
     </span><span class="s2">"result"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NOT SAME PERSON"</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="s2">"extra"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <blockquote>
 <p>请求错误应答样例</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"INVALID_REQUEST"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"error message"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"extra"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"INVALID_REQUEST"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"error message"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <blockquote>
 <p>照片超过2M应答样例</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"IMAGE_INVALID_SIZE"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"image larger than 2M"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"extra"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"IMAGE_INVALID_SIZE"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"image larger than 2M"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-2'>HTTP请求</h3>
 <p><code>POST http://api.izi.credit/api/v1/facecompare</code></p>
@@ -612,19 +594,11 @@
 </tr>
 </thead><tbody>
 <tr>
-<td><code>code</code></td>
+<td><code>status</code></td>
 <td>状态码</td>
 </tr>
 <tr>
 <td><code>message</code></td>
-<td>对应状态码的补充信息说明</td>
-</tr>
-<tr>
-<td><code>extra</code></td>
-<td>额外信息，<em>供调试使用，可忽略</em></td>
-</tr>
-<tr>
-<td><code>data</code></td>
 <td><code>similarity</code>：相似度得分，0~100</td>
 </tr>
 <tr>
@@ -641,7 +615,7 @@
 </thead><tbody>
 <tr>
 <td><code>OK</code></td>
-<td>比对状态正常，<code>data.similarity</code>为相似度得分</td>
+<td>比对状态正常，<code>message.similarity</code>为相似度得分</td>
 </tr>
 <tr>
 <td><code>INVALID_REQUEST</code></td>
@@ -708,56 +682,46 @@
 <p>判定是同一个人应答样例</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OK"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SAME PERSON"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OK"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="s2">"similarity"</span><span class="p">:</span><span class="w"> </span><span class="mf">97.501</span><span class="p">,</span><span class="w">
     </span><span class="s2">"result"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SAME PERSON"</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="s2">"extra"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <blockquote>
 <p>判定不是同一个人应答样例</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OK"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NOT SAME PERSON"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OK"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="s2">"similarity"</span><span class="p">:</span><span class="w"> </span><span class="mf">27.501</span><span class="p">,</span><span class="w">
     </span><span class="s2">"result"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NOT SAME PERSON"</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="s2">"extra"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <blockquote>
 <p>请求错误应答样例</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"INVALID_REQUEST"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"error message"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"extra"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"INVALID_REQUEST"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"error message"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <blockquote>
 <p>照片超过2M应答样例</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"IMAGE_INVALID_SIZE"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"image larger than 2M"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"extra"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"IMAGE_INVALID_SIZE"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"image larger than 2M"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <blockquote>
 <p>非手持身份证照片</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"INVALID_FACE_NUM"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0 faces found"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"extra"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"INVALID_FACE_NUM"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0 faces found"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-3'>HTTP请求</h3>
 <p><code>POST http://api.izi.credit/api/v1/idholding</code></p>
@@ -781,19 +745,11 @@
 </tr>
 </thead><tbody>
 <tr>
-<td><code>code</code></td>
+<td><code>status</code></td>
 <td>状态码</td>
 </tr>
 <tr>
 <td><code>message</code></td>
-<td>对应状态码的补充信息说明</td>
-</tr>
-<tr>
-<td><code>extra</code></td>
-<td>额外信息，<em>供调试使用，可忽略</em></td>
-</tr>
-<tr>
-<td><code>data</code></td>
 <td><code>similarity</code>：相似度得分，0~100</td>
 </tr>
 <tr>
@@ -810,7 +766,7 @@
 </thead><tbody>
 <tr>
 <td><code>OK</code></td>
-<td>比对状态正常，<code>data.similarity</code>为相似度得分</td>
+<td>比对状态正常，<code>message.similarity</code>为相似度得分</td>
 </tr>
 <tr>
 <td><code>INVALID_REQUEST</code></td>
