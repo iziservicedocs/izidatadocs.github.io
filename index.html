@@ -223,6 +223,14 @@
       <div id="toc" class="toc-list-h1">
           <li>
             <a href="#153042ed9e" class="toc-h1 toc-link" data-title="">概述</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#afeebde3f7" class="toc-h2 toc-link" data-title="">返回数据格式</a>
+                  </li>
+                  <li>
+                    <a href="#9ea07c6cb3" class="toc-h2 toc-link" data-title="">状态码说明</a>
+                  </li>
+              </ul>
           </li>
           <li>
             <a href="#0ff9a7d4a6" class="toc-h1 toc-link" data-title="">身份认证</a>
@@ -234,10 +242,10 @@
                     <a href="#1f9ac54b15" class="toc-h2 toc-link" data-title="">请求参数</a>
                   </li>
                   <li>
-                    <a href="#afeebde3f7" class="toc-h2 toc-link" data-title="">返回数据格式</a>
+                    <a href="#afeebde3f7-2" class="toc-h2 toc-link" data-title="">返回数据格式</a>
                   </li>
                   <li>
-                    <a href="#9ea07c6cb3" class="toc-h2 toc-link" data-title="">状态码说明</a>
+                    <a href="#9ea07c6cb3-2" class="toc-h2 toc-link" data-title="">状态码说明</a>
                   </li>
               </ul>
           </li>
@@ -251,10 +259,10 @@
                     <a href="#1f9ac54b15-2" class="toc-h2 toc-link" data-title="">请求参数</a>
                   </li>
                   <li>
-                    <a href="#afeebde3f7-2" class="toc-h2 toc-link" data-title="">返回数据格式</a>
+                    <a href="#afeebde3f7-3" class="toc-h2 toc-link" data-title="">返回数据格式</a>
                   </li>
                   <li>
-                    <a href="#9ea07c6cb3-2" class="toc-h2 toc-link" data-title="">状态码说明</a>
+                    <a href="#9ea07c6cb3-3" class="toc-h2 toc-link" data-title="">状态码说明</a>
                   </li>
               </ul>
           </li>
@@ -268,10 +276,10 @@
                     <a href="#1f9ac54b15-3" class="toc-h2 toc-link" data-title="">请求参数</a>
                   </li>
                   <li>
-                    <a href="#afeebde3f7-3" class="toc-h2 toc-link" data-title="">返回数据格式</a>
+                    <a href="#afeebde3f7-4" class="toc-h2 toc-link" data-title="">返回数据格式</a>
                   </li>
                   <li>
-                    <a href="#9ea07c6cb3-3" class="toc-h2 toc-link" data-title="">状态码说明</a>
+                    <a href="#9ea07c6cb3-4" class="toc-h2 toc-link" data-title="">状态码说明</a>
                   </li>
               </ul>
           </li>
@@ -285,10 +293,10 @@
                     <a href="#1f9ac54b15-4" class="toc-h2 toc-link" data-title="">请求参数</a>
                   </li>
                   <li>
-                    <a href="#afeebde3f7-4" class="toc-h2 toc-link" data-title="">返回数据格式</a>
+                    <a href="#afeebde3f7-5" class="toc-h2 toc-link" data-title="">返回数据格式</a>
                   </li>
                   <li>
-                    <a href="#9ea07c6cb3-4" class="toc-h2 toc-link" data-title="">状态码说明</a>
+                    <a href="#9ea07c6cb3-5" class="toc-h2 toc-link" data-title="">状态码说明</a>
                   </li>
               </ul>
           </li>
@@ -302,10 +310,10 @@
                     <a href="#1f9ac54b15-5" class="toc-h2 toc-link" data-title="">请求参数</a>
                   </li>
                   <li>
-                    <a href="#afeebde3f7-5" class="toc-h2 toc-link" data-title="">返回数据格式</a>
+                    <a href="#afeebde3f7-6" class="toc-h2 toc-link" data-title="">返回数据格式</a>
                   </li>
                   <li>
-                    <a href="#9ea07c6cb3-5" class="toc-h2 toc-link" data-title="">状态码说明</a>
+                    <a href="#9ea07c6cb3-6" class="toc-h2 toc-link" data-title="">状态码说明</a>
                   </li>
                   <li>
                     <a href="#5b632fa423" class="toc-h2 toc-link" data-title="">检测结论说明</a>
@@ -335,6 +343,52 @@
 <aside class="notice">
 请确保将<code>YOUR_ACCESS_KEY</code>和<code>YOUR_SECRET_KEY</code>替换为你自己的AK和SK。
 </aside>
+
+<p>请求者身份验证不通过将直接返回</p>
+<h3 id='afeebde3f7'>返回数据格式</h3>
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>status</code></td>
+<td>状态码</td>
+</tr>
+<tr>
+<td><code>message</code></td>
+<td>错误原因</td>
+</tr>
+</tbody></table>
+<h3 id='9ea07c6cb3'>状态码说明</h3>
+<table><thead>
+<tr>
+<th>status</th>
+<th>说明</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>INSUFFICIENT_BALANCE</code></td>
+<td>余额不足</td>
+</tr>
+<tr>
+<td><code>INVALID_PARAMETER_ERROR</code></td>
+<td>请求参数不合法</td>
+</tr>
+<tr>
+<td><code>EXPIRED_REQUEST</code></td>
+<td>过期请求，请重试</td>
+</tr>
+<tr>
+<td><code>NO_AUTHORIZATION</code></td>
+<td>验证不通过，用户不存在或者校验信息有误</td>
+</tr>
+<tr>
+<td><code>RETRY_LATER</code></td>
+<td>系统错误</td>
+</tr>
+</tbody></table>
 <h1 id='0ff9a7d4a6'>身份认证</h1>
 <p>身份证＋姓名校验身份。</p>
 
@@ -444,7 +498,7 @@
 <td><code>字符串</code>，认证人员的身份证号<code>NIK</code>，格式为16位阿拉伯数字</td>
 </tr>
 </tbody></table>
-<h3 id='afeebde3f7'>返回数据格式</h3>
+<h3 id='afeebde3f7-2'>返回数据格式</h3>
 <table><thead>
 <tr>
 <th>参数</th>
@@ -480,7 +534,7 @@
 <td><code>village</code>：村镇</td>
 </tr>
 </tbody></table>
-<h3 id='9ea07c6cb3'>状态码说明</h3>
+<h3 id='9ea07c6cb3-2'>状态码说明</h3>
 <table><thead>
 <tr>
 <th>status</th>
@@ -617,7 +671,7 @@
 <td><code>字符串</code>，base64编码的第二张图片</td>
 </tr>
 </tbody></table>
-<h3 id='afeebde3f7-2'>返回数据格式</h3>
+<h3 id='afeebde3f7-3'>返回数据格式</h3>
 <table><thead>
 <tr>
 <th>参数</th>
@@ -637,7 +691,7 @@
 <td><code>result</code>：<em>判断结论</em></td>
 </tr>
 </tbody></table>
-<h3 id='9ea07c6cb3-2'>状态码说明</h3>
+<h3 id='9ea07c6cb3-3'>状态码说明</h3>
 <table><thead>
 <tr>
 <th>status</th>
@@ -768,7 +822,7 @@
 <td><code>字符串</code>，base64编码的手持身份证照片</td>
 </tr>
 </tbody></table>
-<h3 id='afeebde3f7-3'>返回数据格式</h3>
+<h3 id='afeebde3f7-4'>返回数据格式</h3>
 <table><thead>
 <tr>
 <th>参数</th>
@@ -788,7 +842,7 @@
 <td><code>result</code>：<em>判断结论</em></td>
 </tr>
 </tbody></table>
-<h3 id='9ea07c6cb3-3'>状态码说明</h3>
+<h3 id='9ea07c6cb3-4'>状态码说明</h3>
 <table><thead>
 <tr>
 <th>status</th>
@@ -915,8 +969,8 @@
 <p>服务器内部错误</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"INTERN_ERROR"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"intern error"</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"RETRY_LATER"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Service is not available right now, please try again later"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-4'>HTTP请求</h3>
 <p><code>POST http://api.izi.credit/v1/id_ocr/general</code></p>
@@ -932,7 +986,7 @@
 <td><code>字符串</code>，base64编码的身份证照片</td>
 </tr>
 </tbody></table>
-<h3 id='afeebde3f7-4'>返回数据格式</h3>
+<h3 id='afeebde3f7-5'>返回数据格式</h3>
 <table><thead>
 <tr>
 <th>参数</th>
@@ -952,7 +1006,7 @@
 <td><code>name</code>：姓名</td>
 </tr>
 </tbody></table>
-<h3 id='9ea07c6cb3-4'>状态码说明</h3>
+<h3 id='9ea07c6cb3-5'>状态码说明</h3>
 <table><thead>
 <tr>
 <th>status</th>
@@ -980,8 +1034,8 @@
 <td>图片大小错误，图片大小base64编码后应小于4M，分辨率不高于4096*4096</td>
 </tr>
 <tr>
-<td><code>INTERN_ERROR</code></td>
-<td>服务器错误</td>
+<td><code>RETRY_LATER</code></td>
+<td>系统错误</td>
 </tr>
 </tbody></table>
 <h1 id='5df4b9d6ea'>黑名单检测</h1>
@@ -1093,7 +1147,7 @@
 <td><code>可选</code>，<code>字符串</code>，检测人员的电话号码</td>
 </tr>
 </tbody></table>
-<h3 id='afeebde3f7-5'>返回数据格式</h3>
+<h3 id='afeebde3f7-6'>返回数据格式</h3>
 <table><thead>
 <tr>
 <th>参数</th>
@@ -1109,7 +1163,7 @@
 <td>黑名单检测结论</td>
 </tr>
 </tbody></table>
-<h3 id='9ea07c6cb3-5'>状态码说明</h3>
+<h3 id='9ea07c6cb3-6'>状态码说明</h3>
 <table><thead>
 <tr>
 <th>status</th>
