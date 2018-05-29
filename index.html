@@ -345,7 +345,15 @@
 </aside>
 
 <p>请求者身份验证不通过将直接返回</p>
-<h3 id='afeebde3f7'>返回数据格式</h3>
+
+<blockquote>
+<p>身份验证不通过应答样例</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[错误状态码，详见后面表格]"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"出错信息"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='afeebde3f7'>返回数据格式</h3>
 <table><thead>
 <tr>
 <th>参数</th>
@@ -421,7 +429,7 @@
         <span class="n">data</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"name"</span><span class="o">,</span> <span class="s">"HELLO NAME"</span><span class="o">);</span>
         <span class="n">data</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"id"</span><span class="o">,</span> <span class="s">"3171024302821001"</span><span class="o">);</span>
         <span class="n">String</span> <span class="n">url</span> <span class="o">=</span> <span class="s">"http://api.izi.credit/v1/identitycheck"</span><span class="o">;</span>
-        <span class="n">String</span> <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="na">request</span><span class="o">(</span><span class="n">url</span><span class="o">,</span> <span class="n">data</span><span class="o">);</span>
+        <span class="n">String</span> <span class="n">response</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="na">Request</span><span class="o">(</span><span class="n">url</span><span class="o">,</span> <span class="n">data</span><span class="o">);</span>
         <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">response</span><span class="o">);</span>
     <span class="o">}</span>
 <span class="o">}</span>
@@ -594,7 +602,7 @@
         <span class="n">data</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"img1"</span><span class="o">,</span> <span class="s">"BASE64_ENCODE_VALUE"</span><span class="o">);</span>
         <span class="n">data</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"img2"</span><span class="o">,</span> <span class="s">"BASE64_ENCODE_VALUE"</span><span class="o">);</span>
         <span class="n">String</span> <span class="n">url</span> <span class="o">=</span> <span class="s">"http://api.izi.credit/v1/facecompare"</span><span class="o">;</span>
-        <span class="n">String</span> <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="na">request</span><span class="o">(</span><span class="n">url</span><span class="o">,</span> <span class="n">data</span><span class="o">);</span>
+        <span class="n">String</span> <span class="n">response</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="na">Request</span><span class="o">(</span><span class="n">url</span><span class="o">,</span> <span class="n">data</span><span class="o">);</span>
         <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">response</span><span class="o">);</span>
     <span class="o">}</span>
 <span class="o">}</span>
@@ -742,7 +750,7 @@
         <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">data</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;&gt;();</span>
         <span class="n">data</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"img"</span><span class="o">,</span> <span class="s">"BASE64_ENCODE_VALUE"</span><span class="o">);</span>
         <span class="n">String</span> <span class="n">url</span> <span class="o">=</span> <span class="s">"http://api.izi.credit/v1/idholding"</span><span class="o">;</span>
-        <span class="n">String</span> <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="na">request</span><span class="o">(</span><span class="n">url</span><span class="o">,</span> <span class="n">data</span><span class="o">);</span>
+        <span class="n">String</span> <span class="n">response</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="na">Request</span><span class="o">(</span><span class="n">url</span><span class="o">,</span> <span class="n">data</span><span class="o">);</span>
         <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">response</span><span class="o">);</span>
     <span class="o">}</span>
 <span class="o">}</span>
@@ -901,7 +909,7 @@
         <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">data</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;&gt;();</span>
         <span class="n">data</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"img"</span><span class="o">,</span> <span class="s">"BASE64_ENCODE_VALUE"</span><span class="o">);</span>
         <span class="n">String</span> <span class="n">url</span> <span class="o">=</span> <span class="s">"http://api.izi.credit/v1/id_ocr/general"</span><span class="o">;</span>
-        <span class="n">String</span> <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="na">request</span><span class="o">(</span><span class="n">url</span><span class="o">,</span> <span class="n">data</span><span class="o">);</span>
+        <span class="n">String</span> <span class="n">response</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="na">Request</span><span class="o">(</span><span class="n">url</span><span class="o">,</span> <span class="n">data</span><span class="o">);</span>
         <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">response</span><span class="o">);</span>
     <span class="o">}</span>
 <span class="o">}</span>
@@ -1079,7 +1087,7 @@
         <span class="n">data</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"id"</span><span class="o">,</span> <span class="s">"3171024302821001"</span><span class="o">);</span>
         <span class="n">data</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"phone"</span><span class="o">,</span> <span class="s">"+62215462180"</span><span class="o">);</span>
         <span class="n">String</span> <span class="n">url</span> <span class="o">=</span> <span class="s">"http://api.izi.credit/v1/blacklist"</span><span class="o">;</span>
-        <span class="n">String</span> <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="na">request</span><span class="o">(</span><span class="n">url</span><span class="o">,</span> <span class="n">data</span><span class="o">);</span>
+        <span class="n">String</span> <span class="n">response</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="na">Request</span><span class="o">(</span><span class="n">url</span><span class="o">,</span> <span class="n">data</span><span class="o">);</span>
         <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">response</span><span class="o">);</span>
     <span class="o">}</span>
 <span class="o">}</span>
