@@ -407,14 +407,14 @@
 
 <span class="n">api</span> <span class="o">=</span> <span class="n">izi</span><span class="o">.</span><span class="n">client</span><span class="p">(</span><span class="s">'YOUR_ACCESS_KEY'</span><span class="p">,</span> <span class="s">'YOUR_SECRET_KEY'</span><span class="p">)</span>
 <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s">"name"</span><span class="p">:</span> <span class="s">"HELLO NAME"</span><span class="p">,</span> <span class="s">"id"</span><span class="p">:</span> <span class="s">"3171024302821001"</span><span class="p">}</span>
-<span class="n">url</span> <span class="o">=</span> <span class="s">"http://api.izi.credit/v1/identitycheck"</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.izi.credit/v1/identitycheck"</span>
 <span class="n">response</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
 </code></pre><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
 <span class="k">require_once</span> <span class="s2">"izi/IziClient.php"</span><span class="p">;</span>
 
 <span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">IziClient</span><span class="p">(</span><span class="s2">"YOUR_ACCESS_KEY"</span><span class="p">,</span> <span class="s2">"YOUR_SECRET_KEY"</span><span class="p">);</span>
-<span class="nv">$url</span> <span class="o">=</span> <span class="s2">"http://api.izi.credit/v1/identitycheck"</span><span class="p">;</span>
+<span class="nv">$url</span> <span class="o">=</span> <span class="s2">"https://api.izi.credit/v1/identitycheck"</span><span class="p">;</span>
 <span class="nv">$data</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s2">"name"</span><span class="o">=&gt;</span><span class="s2">"HELLO NAME"</span><span class="p">,</span> <span class="s2">"id"</span><span class="o">=&gt;</span><span class="s2">"3171010302820001"</span><span class="p">);</span>
 <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="na">request</span><span class="p">(</span><span class="nv">$url</span><span class="p">,</span> <span class="nv">$data</span><span class="p">);</span>
 <span class="k">print</span><span class="p">(</span><span class="nv">$response</span><span class="p">);</span>
@@ -428,7 +428,7 @@
         <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">data</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;&gt;();</span>
         <span class="n">data</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"name"</span><span class="o">,</span> <span class="s">"HELLO NAME"</span><span class="o">);</span>
         <span class="n">data</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"id"</span><span class="o">,</span> <span class="s">"3171024302821001"</span><span class="o">);</span>
-        <span class="n">String</span> <span class="n">url</span> <span class="o">=</span> <span class="s">"http://api.izi.credit/v1/identitycheck"</span><span class="o">;</span>
+        <span class="n">String</span> <span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.izi.credit/v1/identitycheck"</span><span class="o">;</span>
         <span class="n">String</span> <span class="n">response</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="na">Request</span><span class="o">(</span><span class="n">url</span><span class="o">,</span> <span class="n">data</span><span class="o">);</span>
         <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">response</span><span class="o">);</span>
     <span class="o">}</span>
@@ -446,7 +446,7 @@
         </span><span class="s">"name"</span><span class="o">:</span><span class="x"> </span><span class="s">"HELLO NAME"</span><span class="p">,</span><span class="x">
         </span><span class="s">"id"</span><span class="o">:</span><span class="x">   </span><span class="s">"3171024302821001"</span><span class="p">,</span><span class="x">
     </span><span class="p">}</span><span class="x">
-    </span><span class="n">url</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="s">"http://api.izi.credit/v1/identitycheck"</span><span class="x">
+    </span><span class="n">url</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="s">"https://api.izi.credit/v1/identitycheck"</span><span class="x">
     </span><span class="n">response</span><span class="p">,</span><span class="x"> </span><span class="n">_</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">api</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="n">url</span><span class="p">,</span><span class="x"> </span><span class="n">data</span><span class="p">)</span><span class="x">
     </span><span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">response</span><span class="p">)</span><span class="x">
 </span><span class="p">}</span><span class="x">
@@ -489,7 +489,7 @@
   </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"This person can’t be found in our system"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http'>HTTP请求</h3>
-<p><code>POST http://api.izi.credit/v1/identitycheck</code></p>
+<p><code>POST https://api.izi.credit/v1/identitycheck</code></p>
 <h3 id='1f9ac54b15'>请求参数</h3>
 <table><thead>
 <tr>
@@ -527,19 +527,19 @@
 </tr>
 <tr>
 <td></td>
-<td><code>province</code>：省份</td>
+<td><code>province</code>：省份，<code>可能为空</code></td>
 </tr>
 <tr>
 <td></td>
-<td><code>city</code>：城市</td>
+<td><code>city</code>：城市，<code>可能为空</code></td>
 </tr>
 <tr>
 <td></td>
-<td><code>district</code>：区县</td>
+<td><code>district</code>：区县，<code>可能为空</code></td>
 </tr>
 <tr>
 <td></td>
-<td><code>village</code>：村镇</td>
+<td><code>village</code>：村镇，<code>可能为空</code></td>
 </tr>
 </tbody></table>
 <h3 id='9ea07c6cb3-2'>状态码说明</h3>
@@ -551,23 +551,23 @@
 </thead><tbody>
 <tr>
 <td><code>OK</code></td>
-<td>查找成功，库中存在查询的<code>NIK</code>，且姓名比对一致</td>
+<td><code>计费</code>，查找成功，库中存在查询的<code>NIK</code>，且姓名比对一致</td>
 </tr>
 <tr>
 <td><code>NOT</code></td>
-<td>查找成功，库中存在查询的<code>NIK</code>，但姓名比对不一致</td>
+<td><code>计费</code>，查找成功，库中存在查询的<code>NIK</code>，但姓名比对不一致</td>
 </tr>
 <tr>
 <td><code>PERSON_NOT_FOUND</code></td>
-<td>我们库中查不到此<code>NIK</code></td>
+<td><code>免费</code>，我们库中查不到此<code>NIK</code></td>
 </tr>
 <tr>
 <td><code>INVALID_ID_NUMBER</code></td>
-<td>输入的<code>NIK</code>不合法</td>
+<td><code>免费</code>，输入的<code>NIK</code>不合法</td>
 </tr>
 <tr>
 <td><code>RETRY_LATER</code></td>
-<td>系统错误，请稍后重试</td>
+<td><code>免费</code>，系统错误，请稍后重试</td>
 </tr>
 </tbody></table>
 <h1 id='fee91e6388'>人脸比对</h1>
@@ -580,14 +580,14 @@
 
 <span class="n">api</span> <span class="o">=</span> <span class="n">izi</span><span class="o">.</span><span class="n">client</span><span class="p">(</span><span class="s">'YOUR_ACCESS_KEY'</span><span class="p">,</span> <span class="s">'YOUR_SECRET_KEY'</span><span class="p">)</span>
 <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s">"img1"</span><span class="p">:</span> <span class="s">"BASE64_ENCODE_VALUE"</span><span class="p">,</span> <span class="s">"img2"</span><span class="p">:</span> <span class="s">"BASE64_ENCODE_VALUE"</span><span class="p">}</span>
-<span class="n">url</span> <span class="o">=</span> <span class="s">"http://api.izi.credit/v1/facecompare"</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.izi.credit/v1/facecompare"</span>
 <span class="n">response</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
 </code></pre><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
 <span class="k">require_once</span> <span class="s2">"izi/IziClient.php"</span><span class="p">;</span>
 
 <span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">IziClient</span><span class="p">(</span><span class="s2">"YOUR_ACCESS_KEY"</span><span class="p">,</span> <span class="s2">"YOUR_SECRET_KEY"</span><span class="p">);</span>
-<span class="nv">$url</span> <span class="o">=</span> <span class="s2">"http://api.izi.credit/v1/facecompare"</span><span class="p">;</span>
+<span class="nv">$url</span> <span class="o">=</span> <span class="s2">"https://api.izi.credit/v1/facecompare"</span><span class="p">;</span>
 <span class="nv">$data</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s2">"img1"</span><span class="o">=&gt;</span><span class="s2">"BASE64_ENCODE_VALUE"</span><span class="p">,</span> <span class="s2">"img2"</span><span class="o">=&gt;</span><span class="s2">"BASE64_ENCODE_VALUE"</span><span class="p">);</span>
 <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="na">request</span><span class="p">(</span><span class="nv">$url</span><span class="p">,</span> <span class="nv">$data</span><span class="p">);</span>
 <span class="k">print</span><span class="p">(</span><span class="nv">$response</span><span class="p">);</span>
@@ -601,7 +601,7 @@
         <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">data</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;&gt;();</span>
         <span class="n">data</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"img1"</span><span class="o">,</span> <span class="s">"BASE64_ENCODE_VALUE"</span><span class="o">);</span>
         <span class="n">data</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"img2"</span><span class="o">,</span> <span class="s">"BASE64_ENCODE_VALUE"</span><span class="o">);</span>
-        <span class="n">String</span> <span class="n">url</span> <span class="o">=</span> <span class="s">"http://api.izi.credit/v1/facecompare"</span><span class="o">;</span>
+        <span class="n">String</span> <span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.izi.credit/v1/facecompare"</span><span class="o">;</span>
         <span class="n">String</span> <span class="n">response</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="na">Request</span><span class="o">(</span><span class="n">url</span><span class="o">,</span> <span class="n">data</span><span class="o">);</span>
         <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">response</span><span class="o">);</span>
     <span class="o">}</span>
@@ -619,7 +619,7 @@
         </span><span class="s">"img1"</span><span class="o">:</span><span class="x"> </span><span class="s">"BASE64_ENCODE_VALUE"</span><span class="p">,</span><span class="x">
         </span><span class="s">"img2"</span><span class="o">:</span><span class="x"> </span><span class="s">"BASE64_ENCODE_VALUE"</span><span class="p">,</span><span class="x">
     </span><span class="p">}</span><span class="x">
-    </span><span class="n">url</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="s">"http://api.izi.credit/v1/facecompare"</span><span class="x">
+    </span><span class="n">url</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="s">"https://api.izi.credit/v1/facecompare"</span><span class="x">
     </span><span class="n">response</span><span class="p">,</span><span class="x"> </span><span class="n">_</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">api</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="n">url</span><span class="p">,</span><span class="x"> </span><span class="n">data</span><span class="p">)</span><span class="x">
     </span><span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">response</span><span class="p">)</span><span class="x">
 </span><span class="p">}</span><span class="x">
@@ -662,7 +662,7 @@
   </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"image larger than 2M"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-2'>HTTP请求</h3>
-<p><code>POST http://api.izi.credit/v1/facecompare</code></p>
+<p><code>POST https://api.izi.credit/v1/facecompare</code></p>
 <h3 id='1f9ac54b15-2'>请求参数</h3>
 <table><thead>
 <tr>
@@ -708,15 +708,15 @@
 </thead><tbody>
 <tr>
 <td><code>OK</code></td>
-<td>比对状态正常，<code>message.similarity</code>为相似度得分</td>
+<td><code>计费</code>，比对状态正常，<code>message.similarity</code>为相似度得分</td>
 </tr>
 <tr>
 <td><code>INVALID_REQUEST</code></td>
-<td>请求参数不正确</td>
+<td><code>免费</code>，请求参数不正确</td>
 </tr>
 <tr>
 <td><code>IMAGE_INVALID_SIZE</code></td>
-<td>图片大小超过2M</td>
+<td><code>免费</code>，图片大小超过2M</td>
 </tr>
 </tbody></table>
 <h1 id='7feddf6a45'>手持身份证照片比对</h1>
@@ -729,14 +729,14 @@
 
 <span class="n">api</span> <span class="o">=</span> <span class="n">izi</span><span class="o">.</span><span class="n">client</span><span class="p">(</span><span class="s">'YOUR_ACCESS_KEY'</span><span class="p">,</span> <span class="s">'YOUR_SECRET_KEY'</span><span class="p">)</span>
 <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s">"img"</span><span class="p">:</span> <span class="s">"BASE64_ENCODE_VALUE"</span><span class="p">}</span>
-<span class="n">url</span> <span class="o">=</span> <span class="s">"http://api.izi.credit/v1/idholding"</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.izi.credit/v1/idholding"</span>
 <span class="n">response</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
 </code></pre><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
 <span class="k">require_once</span> <span class="s2">"izi/IziClient.php"</span><span class="p">;</span>
 
 <span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">IziClient</span><span class="p">(</span><span class="s2">"YOUR_ACCESS_KEY"</span><span class="p">,</span> <span class="s2">"YOUR_SECRET_KEY"</span><span class="p">);</span>
-<span class="nv">$url</span> <span class="o">=</span> <span class="s2">"http://api.izi.credit/v1/idholding"</span><span class="p">;</span>
+<span class="nv">$url</span> <span class="o">=</span> <span class="s2">"https://api.izi.credit/v1/idholding"</span><span class="p">;</span>
 <span class="nv">$data</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s2">"img"</span><span class="o">=&gt;</span><span class="s2">"BASE64_ENCODE_VALUE"</span><span class="p">);</span>
 <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="na">request</span><span class="p">(</span><span class="nv">$url</span><span class="p">,</span> <span class="nv">$data</span><span class="p">);</span>
 <span class="k">print</span><span class="p">(</span><span class="nv">$response</span><span class="p">);</span>
@@ -749,7 +749,7 @@
         <span class="n">Client</span> <span class="n">api</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Client</span><span class="o">(</span><span class="s">"YOUR_ACCESS_KEY"</span><span class="o">,</span> <span class="s">"YOUR_SECRET_KEY"</span><span class="o">);</span>
         <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">data</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;&gt;();</span>
         <span class="n">data</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"img"</span><span class="o">,</span> <span class="s">"BASE64_ENCODE_VALUE"</span><span class="o">);</span>
-        <span class="n">String</span> <span class="n">url</span> <span class="o">=</span> <span class="s">"http://api.izi.credit/v1/idholding"</span><span class="o">;</span>
+        <span class="n">String</span> <span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.izi.credit/v1/idholding"</span><span class="o">;</span>
         <span class="n">String</span> <span class="n">response</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="na">Request</span><span class="o">(</span><span class="n">url</span><span class="o">,</span> <span class="n">data</span><span class="o">);</span>
         <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">response</span><span class="o">);</span>
     <span class="o">}</span>
@@ -766,7 +766,7 @@
     </span><span class="n">data</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="k">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">string</span><span class="p">{</span><span class="x">
         </span><span class="s">"img"</span><span class="o">:</span><span class="x"> </span><span class="s">"BASE64_ENCODE_VALUE"</span><span class="p">,</span><span class="x">
     </span><span class="p">}</span><span class="x">
-    </span><span class="n">url</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="s">"http://api.izi.credit/v1/idholding"</span><span class="x">
+    </span><span class="n">url</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="s">"https://api.izi.credit/v1/idholding"</span><span class="x">
     </span><span class="n">response</span><span class="p">,</span><span class="x"> </span><span class="n">_</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">api</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="n">url</span><span class="p">,</span><span class="x"> </span><span class="n">data</span><span class="p">)</span><span class="x">
     </span><span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">response</span><span class="p">)</span><span class="x">
 </span><span class="p">}</span><span class="x">
@@ -817,7 +817,7 @@
   </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0 faces found"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-3'>HTTP请求</h3>
-<p><code>POST http://api.izi.credit/v1/idholding</code></p>
+<p><code>POST https://api.izi.credit/v1/idholding</code></p>
 <h3 id='1f9ac54b15-3'>请求参数</h3>
 <table><thead>
 <tr>
@@ -859,23 +859,23 @@
 </thead><tbody>
 <tr>
 <td><code>OK</code></td>
-<td>比对状态正常，<code>message.similarity</code>为相似度得分</td>
+<td><code>计费</code>，比对状态正常，<code>message.similarity</code>为相似度得分</td>
 </tr>
 <tr>
 <td><code>INVALID_REQUEST</code></td>
-<td>请求参数不正确</td>
+<td><code>免费</code>，请求参数不正确</td>
 </tr>
 <tr>
 <td><code>IMAGE_INVALID_SIZE</code></td>
-<td>图片大小超过2M</td>
+<td><code>免费</code>，图片大小超过2M</td>
 </tr>
 <tr>
 <td><code>INVALID_FACE_NUM</code></td>
-<td>非手持身份证照片</td>
+<td><code>免费</code>，非手持身份证照片</td>
 </tr>
 <tr>
 <td><code>RETRY_LATER</code></td>
-<td>服务器错误</td>
+<td><code>免费</code>，服务器错误</td>
 </tr>
 </tbody></table>
 <h1 id='ocr'>OCR</h1>
@@ -888,14 +888,14 @@
 
 <span class="n">api</span> <span class="o">=</span> <span class="n">izi</span><span class="o">.</span><span class="n">client</span><span class="p">(</span><span class="s">'YOUR_ACCESS_KEY'</span><span class="p">,</span> <span class="s">'YOUR_SECRET_KEY'</span><span class="p">)</span>
 <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s">"img"</span><span class="p">:</span> <span class="s">"BASE64_ENCODE_VALUE"</span><span class="p">}</span>
-<span class="n">url</span> <span class="o">=</span> <span class="s">"http://api.izi.credit/v1/id_ocr/general"</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.izi.credit/v1/id_ocr/general"</span>
 <span class="n">response</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
 </code></pre><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
 <span class="k">require_once</span> <span class="s2">"izi/IziClient.php"</span><span class="p">;</span>
 
 <span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">IziClient</span><span class="p">(</span><span class="s2">"YOUR_ACCESS_KEY"</span><span class="p">,</span> <span class="s2">"YOUR_SECRET_KEY"</span><span class="p">);</span>
-<span class="nv">$url</span> <span class="o">=</span> <span class="s2">"http://api.izi.credit/v1/id_ocr/general"</span><span class="p">;</span>
+<span class="nv">$url</span> <span class="o">=</span> <span class="s2">"https://api.izi.credit/v1/id_ocr/general"</span><span class="p">;</span>
 <span class="nv">$data</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s2">"img"</span><span class="o">=&gt;</span><span class="s2">"BASE64_ENCODE_VALUE"</span><span class="p">);</span>
 <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="na">request</span><span class="p">(</span><span class="nv">$url</span><span class="p">,</span> <span class="nv">$data</span><span class="p">);</span>
 <span class="k">print</span><span class="p">(</span><span class="nv">$response</span><span class="p">);</span>
@@ -908,7 +908,7 @@
         <span class="n">Client</span> <span class="n">api</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Client</span><span class="o">(</span><span class="s">"YOUR_ACCESS_KEY"</span><span class="o">,</span> <span class="s">"YOUR_SECRET_KEY"</span><span class="o">);</span>
         <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">data</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;&gt;();</span>
         <span class="n">data</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"img"</span><span class="o">,</span> <span class="s">"BASE64_ENCODE_VALUE"</span><span class="o">);</span>
-        <span class="n">String</span> <span class="n">url</span> <span class="o">=</span> <span class="s">"http://api.izi.credit/v1/id_ocr/general"</span><span class="o">;</span>
+        <span class="n">String</span> <span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.izi.credit/v1/id_ocr/general"</span><span class="o">;</span>
         <span class="n">String</span> <span class="n">response</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="na">Request</span><span class="o">(</span><span class="n">url</span><span class="o">,</span> <span class="n">data</span><span class="o">);</span>
         <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">response</span><span class="o">);</span>
     <span class="o">}</span>
@@ -925,7 +925,7 @@
     </span><span class="n">data</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="k">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">string</span><span class="p">{</span><span class="x">
         </span><span class="s">"img"</span><span class="o">:</span><span class="x"> </span><span class="s">"BASE64_ENCODE_VALUE"</span><span class="p">,</span><span class="x">
     </span><span class="p">}</span><span class="x">
-    </span><span class="n">url</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="s">"http://api.izi.credit/v1/id_ocr/general"</span><span class="x">
+    </span><span class="n">url</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="s">"https://api.izi.credit/v1/id_ocr/general"</span><span class="x">
     </span><span class="n">response</span><span class="p">,</span><span class="x"> </span><span class="n">_</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">api</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="n">url</span><span class="p">,</span><span class="x"> </span><span class="n">data</span><span class="p">)</span><span class="x">
     </span><span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">response</span><span class="p">)</span><span class="x">
 </span><span class="p">}</span><span class="x">
@@ -981,7 +981,7 @@
   </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Service is not available right now, please try again later"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-4'>HTTP请求</h3>
-<p><code>POST http://api.izi.credit/v1/id_ocr/general</code></p>
+<p><code>POST https://api.izi.credit/v1/id_ocr/general</code></p>
 <h3 id='1f9ac54b15-4'>请求参数</h3>
 <table><thead>
 <tr>
@@ -1023,27 +1023,27 @@
 </thead><tbody>
 <tr>
 <td><code>OK</code></td>
-<td>识别成功</td>
+<td><code>计费</code>，识别成功</td>
 </tr>
 <tr>
 <td><code>IMAGE_RECOGNIZE_ERROR</code></td>
-<td>图片识别失败</td>
+<td><code>免费</code>，图片识别失败</td>
 </tr>
 <tr>
 <td><code>IMAGE_DETECT_ERROR</code></td>
-<td>图片识别区域检测失败</td>
+<td><code>免费</code>，图片识别区域检测失败</td>
 </tr>
 <tr>
 <td><code>IMAGE_INVALID_FORMAT</code></td>
-<td>图片格式不支持，现阶段仅支持PNG、JPG、JPEG、BMP</td>
+<td><code>免费</code>，图片格式不支持，现阶段仅支持PNG、JPG、JPEG、BMP</td>
 </tr>
 <tr>
 <td><code>IMAGE_INVALID_SIZE</code></td>
-<td>图片大小错误，图片大小base64编码后应小于4M，分辨率不高于4096*4096</td>
+<td><code>免费</code>，图片大小错误，图片大小base64编码后应小于4M，分辨率不高于4096*4096</td>
 </tr>
 <tr>
 <td><code>RETRY_LATER</code></td>
-<td>系统错误</td>
+<td><code>免费</code>，系统错误</td>
 </tr>
 </tbody></table>
 <h1 id='5df4b9d6ea'>黑名单检测</h1>
@@ -1060,14 +1060,14 @@
   <span class="s">"id"</span><span class="p">:</span> <span class="s">"3171024302821001"</span><span class="p">,</span>
   <span class="s">"phone"</span><span class="p">:</span> <span class="s">"+62215462180"</span>
 <span class="p">}</span>
-<span class="n">url</span> <span class="o">=</span> <span class="s">"http://api.izi.credit/v1/blacklist"</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.izi.credit/v1/blacklist"</span>
 <span class="n">response</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
 </code></pre><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
 <span class="k">require_once</span> <span class="s2">"izi/IziClient.php"</span><span class="p">;</span>
 
 <span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">IziClient</span><span class="p">(</span><span class="s2">"YOUR_ACCESS_KEY"</span><span class="p">,</span> <span class="s2">"YOUR_SECRET_KEY"</span><span class="p">);</span>
-<span class="nv">$url</span> <span class="o">=</span> <span class="s2">"http://api.izi.credit/v1/blacklist"</span><span class="p">;</span>
+<span class="nv">$url</span> <span class="o">=</span> <span class="s2">"https://api.izi.credit/v1/blacklist"</span><span class="p">;</span>
 <span class="nv">$data</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
   <span class="s2">"name"</span><span class="o">=&gt;</span><span class="s2">"HELLO NAME"</span><span class="p">,</span>
   <span class="s2">"id"</span><span class="o">=&gt;</span><span class="s2">"3171010302820001"</span><span class="p">,</span>
@@ -1086,7 +1086,7 @@
         <span class="n">data</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"name"</span><span class="o">,</span> <span class="s">"HELLO NAME"</span><span class="o">);</span>
         <span class="n">data</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"id"</span><span class="o">,</span> <span class="s">"3171024302821001"</span><span class="o">);</span>
         <span class="n">data</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"phone"</span><span class="o">,</span> <span class="s">"+62215462180"</span><span class="o">);</span>
-        <span class="n">String</span> <span class="n">url</span> <span class="o">=</span> <span class="s">"http://api.izi.credit/v1/blacklist"</span><span class="o">;</span>
+        <span class="n">String</span> <span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.izi.credit/v1/blacklist"</span><span class="o">;</span>
         <span class="n">String</span> <span class="n">response</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="na">Request</span><span class="o">(</span><span class="n">url</span><span class="o">,</span> <span class="n">data</span><span class="o">);</span>
         <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">response</span><span class="o">);</span>
     <span class="o">}</span>
@@ -1105,7 +1105,7 @@
         </span><span class="s">"id"</span><span class="o">:</span><span class="x">    </span><span class="s">"3171024302821001"</span><span class="p">,</span><span class="x">
         </span><span class="s">"phone"</span><span class="o">:</span><span class="x"> </span><span class="s">"+62215462180"</span><span class="p">,</span><span class="x">
     </span><span class="p">}</span><span class="x">
-    </span><span class="n">url</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="s">"http://api.izi.credit/v1/blacklist"</span><span class="x">
+    </span><span class="n">url</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="s">"https://api.izi.credit/v1/blacklist"</span><span class="x">
     </span><span class="n">response</span><span class="p">,</span><span class="x"> </span><span class="n">_</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">api</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="n">url</span><span class="p">,</span><span class="x"> </span><span class="n">data</span><span class="p">)</span><span class="x">
     </span><span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">response</span><span class="p">)</span><span class="x">
 </span><span class="p">}</span><span class="x">
@@ -1134,7 +1134,7 @@
   </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NEEDS_VERIFICATION"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-5'>HTTP请求</h3>
-<p><code>POST http://api.izi.credit/v1/blacklist</code></p>
+<p><code>POST https://api.izi.credit/v1/blacklist</code></p>
 <h3 id='1f9ac54b15-5'>请求参数</h3>
 <table><thead>
 <tr>
@@ -1180,19 +1180,19 @@
 </thead><tbody>
 <tr>
 <td><code>OK</code></td>
-<td>检测成功，<code>message</code>为检测结论</td>
+<td><code>计费</code>，检测成功，<code>message</code>为检测结论</td>
 </tr>
 <tr>
 <td><code>INVALID_ID_NUMBER</code></td>
-<td>输入的<code>NIK</code>不合法</td>
+<td><code>免费</code>，输入的<code>NIK</code>不合法</td>
 </tr>
 <tr>
 <td><code>INVALID_PHONE_NUMBER</code></td>
-<td>输入的电话号码不合法</td>
+<td><code>免费</code>，输入的电话号码不合法</td>
 </tr>
 <tr>
 <td><code>RETRY_LATER</code></td>
-<td>系统错误，请稍后重试</td>
+<td><code>免费</code>，系统错误，请稍后重试</td>
 </tr>
 </tbody></table>
 <h3 id='5b632fa423'>检测结论说明</h3>
