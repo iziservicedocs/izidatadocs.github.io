@@ -330,9 +330,9 @@
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='153042ed9e'>概述</h1>
-<p>izi.credit提供如身份证实名认证、人脸比对识别、手持身份证识别、身份证OCR、个人/企业征信等API接口。</p>
+<p>iziData提供如身份证实名认证、人脸比对识别、手持身份证识别、身份证OCR、个人/企业征信等API接口。</p>
 
-<p>izi.credit服务后台需要通过使用Access Key / Secret Key加密的方法来验证某个请求的发送者身份。Access Key（AK）用于标示用户，Secret Key（SK）是用户用于加密认证字符串和izi.credit服务用来验证认证字符串的密钥，其中SK必须保密，只有用户和izi.credit知道。</p>
+<p>iziData服务后台需要通过使用Access Key / Secret Key加密的方法来验证某个请求的发送者身份。Access Key（AK）用于标示用户，Secret Key（SK）是用户用于加密认证字符串和iziData服务用来验证认证字符串的密钥，其中SK必须保密，只有用户和iziData知道。</p>
 
 <p>SDK初始化，需要用户先申请到属于自己的AK和SK。</p>
 
@@ -1180,7 +1180,7 @@
 </thead><tbody>
 <tr>
 <td><code>OK</code></td>
-<td><code>计费</code>，检测成功，<code>message</code>为检测结论</td>
+<td>检测成功，<code>message</code>为检测结论</td>
 </tr>
 <tr>
 <td><code>INVALID_ID_NUMBER</code></td>
@@ -1204,15 +1204,15 @@
 </thead><tbody>
 <tr>
 <td><code>REJECT</code></td>
-<td>命中黑名单，拒绝</td>
+<td><code>计费</code>，命中黑名单，拒绝</td>
 </tr>
 <tr>
 <td><code>NEEDS_VERIFICATION</code></td>
-<td>命中黑名单，需进一步验证</td>
+<td><code>计费</code>，命中黑名单，需进一步验证</td>
 </tr>
 <tr>
 <td><code>PASS</code></td>
-<td>未命中黑名单</td>
+<td><code>免费</code>，未命中黑名单</td>
 </tr>
 </tbody></table>
 
