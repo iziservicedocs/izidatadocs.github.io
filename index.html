@@ -264,6 +264,9 @@
                   <li>
                     <a href="#9ea07c6cb3-3" class="toc-h2 toc-link" data-title="">状态码说明</a>
                   </li>
+                  <li>
+                    <a href="#c7bf6799e7" class="toc-h2 toc-link" data-title="">判断结论说明</a>
+                  </li>
               </ul>
           </li>
           <li>
@@ -647,6 +650,17 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <blockquote>
+<p>不确定是否同一个人应答样例</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OK"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"similarity"</span><span class="p">:</span><span class="w"> </span><span class="mf">50.501</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"result"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NOT SURE"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
 <p>请求错误应答样例</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
@@ -717,6 +731,26 @@
 <tr>
 <td><code>IMAGE_INVALID_SIZE</code></td>
 <td><code>免费</code>，图片大小超过2M</td>
+</tr>
+</tbody></table>
+<h3 id='c7bf6799e7'>判断结论说明</h3>
+<table><thead>
+<tr>
+<th>result</th>
+<th>说明</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>SAME PERSON</code></td>
+<td>是同一个人</td>
+</tr>
+<tr>
+<td><code>NOT SAME PERSON</code></td>
+<td>不是同一个人</td>
+</tr>
+<tr>
+<td><code>NOT SURE</code></td>
+<td>不确定</td>
 </tr>
 </tbody></table>
 <h1 id='7feddf6a45'>手持身份证照片比对</h1>
