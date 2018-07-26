@@ -1293,7 +1293,7 @@
 
 <span class="n">api</span> <span class="o">=</span> <span class="n">izi</span><span class="o">.</span><span class="n">client</span><span class="p">(</span><span class="s">'YOUR_ACCESS_KEY'</span><span class="p">,</span> <span class="s">'YOUR_SECRET_KEY'</span><span class="p">)</span>
 <span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="s">"phonenum"</span><span class="p">:</span> <span class="s">"+62895806600002"</span>
+  <span class="s">"phone"</span><span class="p">:</span> <span class="s">"+62895806600002"</span>
 <span class="p">}</span>
 <span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.izi.credit/v1/phoneage"</span>
 <span class="n">response</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
@@ -1304,7 +1304,7 @@
 <span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">IziClient</span><span class="p">(</span><span class="s2">"YOUR_ACCESS_KEY"</span><span class="p">,</span> <span class="s2">"YOUR_SECRET_KEY"</span><span class="p">);</span>
 <span class="nv">$url</span> <span class="o">=</span> <span class="s2">"https://api.izi.credit/v1/phoneage"</span><span class="p">;</span>
 <span class="nv">$data</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
-  <span class="s2">"phonenum"</span><span class="o">=&gt;</span><span class="s2">"+62895806600002"</span>
+  <span class="s2">"phone"</span><span class="o">=&gt;</span><span class="s2">"+62895806600002"</span>
 <span class="p">);</span>
 <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="na">request</span><span class="p">(</span><span class="nv">$url</span><span class="p">,</span> <span class="nv">$data</span><span class="p">);</span>
 <span class="k">print</span><span class="p">(</span><span class="nv">$response</span><span class="p">);</span>
@@ -1316,7 +1316,7 @@
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
         <span class="n">Client</span> <span class="n">api</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Client</span><span class="o">(</span><span class="s">"YOUR_ACCESS_KEY"</span><span class="o">,</span> <span class="s">"YOUR_SECRET_KEY"</span><span class="o">);</span>
         <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">data</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;&gt;();</span>
-        <span class="n">data</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"phonenum"</span><span class="o">,</span> <span class="s">"+62895806600002"</span><span class="o">);</span>
+        <span class="n">data</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"phone"</span><span class="o">,</span> <span class="s">"+62895806600002"</span><span class="o">);</span>
         <span class="n">String</span> <span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.izi.credit/v1/phoneage"</span><span class="o">;</span>
         <span class="n">String</span> <span class="n">response</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="na">Request</span><span class="o">(</span><span class="n">url</span><span class="o">,</span> <span class="n">data</span><span class="o">);</span>
         <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">response</span><span class="o">);</span>
@@ -1332,7 +1332,7 @@
 </span><span class="k">func</span><span class="x"> </span><span class="n">main</span><span class="p">()</span><span class="x"> </span><span class="p">{</span><span class="x">
     </span><span class="n">api</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">gosdk</span><span class="o">.</span><span class="n">NewClient</span><span class="p">(</span><span class="s">"YOUR_ACCESS_KEY"</span><span class="p">,</span><span class="x"> </span><span class="s">"YOUR_SECRET_KEY"</span><span class="p">)</span><span class="x">
     </span><span class="n">data</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="k">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">string</span><span class="p">{</span><span class="x">
-        </span><span class="s">"phonenum"</span><span class="o">:</span><span class="x"> </span><span class="s">"+62895806600002"</span><span class="p">,</span><span class="x">
+        </span><span class="s">"phone"</span><span class="o">:</span><span class="x"> </span><span class="s">"+62895806600002"</span><span class="p">,</span><span class="x">
     </span><span class="p">}</span><span class="x">
     </span><span class="n">url</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="s">"https://api.izi.credit/v1/phoneage"</span><span class="x">
     </span><span class="n">response</span><span class="p">,</span><span class="x"> </span><span class="n">_</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">api</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="n">url</span><span class="p">,</span><span class="x"> </span><span class="n">data</span><span class="p">)</span><span class="x">
@@ -1340,23 +1340,23 @@
 </span><span class="p">}</span><span class="x">
 </span></code></pre>
 <blockquote>
-<p>输入的phonenum查询到结果的应答样例</p>
+<p>输入的phone查询到结果的应答样例</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OK"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"phone_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+62895806600002"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+62895806600002"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"age"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4"</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <blockquote>
-<p>输入的phonenum查询不到结果的应答样例</p>
+<p>输入的phone查询不到结果的应答样例</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
 
-  </span><span class="s2">"status"</span><span class="p">:</span><span class="s2">"PHONENUMBER_NOT_FOUND"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"message"</span><span class="p">:</span><span class="s2">"This phone number can’t be found in our system"</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PHONENUMBER_NOT_FOUND"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"This phone number can’t be found in our system"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-6'>HTTP请求</h3>
 <p><code>POST https://api.izi.credit/v1/phoneage</code></p>
@@ -1368,7 +1368,7 @@
 </tr>
 </thead><tbody>
 <tr>
-<td><code>phonenum</code></td>
+<td><code>phone</code></td>
 <td><code>必选</code>，<code>字符串</code>，电话号码</td>
 </tr>
 </tbody></table>
@@ -1385,7 +1385,7 @@
 </tr>
 <tr>
 <td><code>message</code></td>
-<td><code>phone_number</code>：电话号码</td>
+<td><code>phone</code>：电话号码</td>
 </tr>
 <tr>
 <td></td>
@@ -1426,7 +1426,7 @@
 
 <span class="n">api</span> <span class="o">=</span> <span class="n">izi</span><span class="o">.</span><span class="n">client</span><span class="p">(</span><span class="s">'YOUR_ACCESS_KEY'</span><span class="p">,</span> <span class="s">'YOUR_SECRET_KEY'</span><span class="p">)</span>
 <span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="s">"id"</span><span class="p">:</span><span class="s">"3171024302821001"</span>
+  <span class="s">"id"</span><span class="p">:</span> <span class="s">"3171024302821001"</span><span class="p">,</span>
   <span class="s">"phone"</span><span class="p">:</span> <span class="s">"+62895806600002"</span>
 <span class="p">}</span>
 <span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.izi.credit/v1/mutiphone"</span>
@@ -1438,7 +1438,7 @@
 <span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">IziClient</span><span class="p">(</span><span class="s2">"YOUR_ACCESS_KEY"</span><span class="p">,</span> <span class="s2">"YOUR_SECRET_KEY"</span><span class="p">);</span>
 <span class="nv">$url</span> <span class="o">=</span> <span class="s2">"https://api.izi.credit/v1/mutiphone"</span><span class="p">;</span>
 <span class="nv">$data</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
-  <span class="s2">"id"</span><span class="o">=&gt;</span><span class="s2">"3171024302821001"</span>
+  <span class="s2">"id"</span><span class="o">=&gt;</span><span class="s2">"3171024302821001"</span><span class="p">,</span>
   <span class="s2">"phone"</span><span class="o">=&gt;</span><span class="s2">"+62895806600002"</span>
 <span class="p">);</span>
 <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="na">request</span><span class="p">(</span><span class="nv">$url</span><span class="p">,</span> <span class="nv">$data</span><span class="p">);</span>
@@ -1484,8 +1484,8 @@
   </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="s2">"id_info"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+62895806600001,+62895806600002"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"phone_info"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
-      </span><span class="s2">"id"</span><span class="p">:</span><span class="s2">"3171024302821001"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"phone"</span><span class="p">:</span><span class="s2">"+62895806600001,+62895806600002"</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3171024302821001"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+62895806600001,+62895806600002"</span><span class="w">
     </span><span class="p">}]</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
@@ -1509,8 +1509,8 @@
   </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="s2">"id_info"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
     </span><span class="s2">"phone_info"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
-      </span><span class="s2">"id"</span><span class="p">:</span><span class="s2">"3171024302821001"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"phone"</span><span class="p">:</span><span class="s2">""</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3171024302821001"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
     </span><span class="p">}]</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
@@ -1519,8 +1519,8 @@
 <p>输入的id和phone未查询到任何结果的应答样例</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"status"</span><span class="p">:</span><span class="s2">"NOT_FOUND"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"message"</span><span class="p">:</span><span class="s2">"Id and phone can’t be found in our system"</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NOT_FOUND"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Id and phone can’t be found in our system"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-7'>HTTP请求</h3>
 <p><code>POST https://api.izi.credit/v1/mutiphone</code></p>
