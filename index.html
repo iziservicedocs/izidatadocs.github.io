@@ -340,6 +340,23 @@
                   </li>
               </ul>
           </li>
+          <li>
+            <a href="#9776cc0354" class="toc-h1 toc-link" data-title="一人多号">一人多号</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#http-7" class="toc-h2 toc-link" data-title="HTTP请求">HTTP请求</a>
+                  </li>
+                  <li>
+                    <a href="#1f9ac54b15-7" class="toc-h2 toc-link" data-title="请求参数">请求参数</a>
+                  </li>
+                  <li>
+                    <a href="#afeebde3f7-8" class="toc-h2 toc-link" data-title="返回数据格式">返回数据格式</a>
+                  </li>
+                  <li>
+                    <a href="#9ea07c6cb3-8" class="toc-h2 toc-link" data-title="状态码说明">状态码说明</a>
+                  </li>
+              </ul>
+          </li>
       </ul>
         <ul class="toc-footer">
             <li><a href='#'>首页</a></li>
@@ -1363,7 +1380,7 @@
 </tr>
 <tr>
 <td></td>
-<td><code>online_time</code>：在网时长</td>
+<td><code>online_time</code>：在网时长,1：【0-1个月)，2：【1-3个月)，3：【3-6个月），4：【6个月,+∞）</td>
 </tr>
 </tbody></table>
 <h3 id='9ea07c6cb3-7'>状态码说明</h3>
@@ -1383,6 +1400,153 @@
 </tr>
 <tr>
 <td><code>PHONENUMBER_NOT_FOUND</code></td>
+<td><code>免费</code>，未查询到结果</td>
+</tr>
+<tr>
+<td><code>RETRY_LATER</code></td>
+<td><code>免费</code>，系统错误，请稍后重试</td>
+</tr>
+</tbody></table>
+<h1 id='9776cc0354'>一人多号</h1>
+<p>根据电话号码，提供在网时长。</p>
+
+<blockquote>
+<p>代码示例：</p>
+</blockquote>
+<pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">izi</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="n">izi</span><span class="o">.</span><span class="n">client</span><span class="p">(</span><span class="s">'YOUR_ACCESS_KEY'</span><span class="p">,</span> <span class="s">'YOUR_SECRET_KEY'</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s">"id"</span><span class="p">:</span><span class="s">"3209406609990002"</span>
+  <span class="s">"phone"</span><span class="p">:</span> <span class="s">"+6289508619964"</span>
+<span class="p">}</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.izi.credit/v1/mutiphone"</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</code></pre><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+<span class="k">require_once</span> <span class="s2">"izi/IziClient.php"</span><span class="p">;</span>
+
+<span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">IziClient</span><span class="p">(</span><span class="s2">"YOUR_ACCESS_KEY"</span><span class="p">,</span> <span class="s2">"YOUR_SECRET_KEY"</span><span class="p">);</span>
+<span class="nv">$url</span> <span class="o">=</span> <span class="s2">"https://api.izi.credit/v1/mutiphone"</span><span class="p">;</span>
+<span class="nv">$data</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+  <span class="s2">"id"</span><span class="o">:</span><span class="s2">"3209406609990002"</span>
+  <span class="s2">"phone"</span><span class="o">=&gt;</span><span class="s2">"+6289508619964"</span>
+<span class="p">);</span>
+<span class="nv">$response</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="na">request</span><span class="p">(</span><span class="nv">$url</span><span class="p">,</span> <span class="nv">$data</span><span class="p">);</span>
+<span class="k">print</span><span class="p">(</span><span class="nv">$response</span><span class="p">);</span>
+</code></pre><pre class="highlight java tab-java"><code><span class="kn">import</span> <span class="nn">java.util.HashMap</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Map</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">credit.izi.Client</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainClass</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">Client</span> <span class="n">api</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Client</span><span class="o">(</span><span class="s">"YOUR_ACCESS_KEY"</span><span class="o">,</span> <span class="s">"YOUR_SECRET_KEY"</span><span class="o">);</span>
+        <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">data</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;&gt;();</span>
+        <span class="n">data</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"id"</span><span class="o">,</span> <span class="s">"3209406609990002"</span><span class="o">);</span>
+        <span class="n">data</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"phone"</span><span class="o">,</span> <span class="s">"+6289508619964"</span><span class="o">);</span>
+        <span class="n">String</span> <span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.izi.credit/v1/mutiphone"</span><span class="o">;</span>
+        <span class="n">String</span> <span class="n">response</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="na">Request</span><span class="o">(</span><span class="n">url</span><span class="o">,</span> <span class="n">data</span><span class="o">);</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">response</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre><pre class="highlight go tab-go"><code><span class="k">package</span><span class="x"> </span><span class="n">main</span><span class="x">
+
+</span><span class="k">import</span><span class="x"> </span><span class="p">(</span><span class="x">
+    </span><span class="s">"fmt"</span><span class="x">
+    </span><span class="s">"github.com/izisdk/gosdk"</span><span class="x">
+</span><span class="p">)</span><span class="x">
+
+</span><span class="k">func</span><span class="x"> </span><span class="n">main</span><span class="p">()</span><span class="x"> </span><span class="p">{</span><span class="x">
+    </span><span class="n">api</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">gosdk</span><span class="o">.</span><span class="n">NewClient</span><span class="p">(</span><span class="s">"YOUR_ACCESS_KEY"</span><span class="p">,</span><span class="x"> </span><span class="s">"YOUR_SECRET_KEY"</span><span class="p">)</span><span class="x">
+    </span><span class="n">data</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="k">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">string</span><span class="p">{</span><span class="x">
+        </span><span class="s">"id"</span><span class="o">:</span><span class="x"> </span><span class="s">"3209406609990002"</span><span class="p">,</span><span class="x">
+        </span><span class="s">"phone"</span><span class="o">:</span><span class="x"> </span><span class="s">"+6289508619964"</span><span class="p">,</span><span class="x">
+    </span><span class="p">}</span><span class="x">
+    </span><span class="n">url</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="s">"https://api.izi.credit/v1/mutiphone"</span><span class="x">
+    </span><span class="n">response</span><span class="p">,</span><span class="x"> </span><span class="n">_</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">api</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="n">url</span><span class="p">,</span><span class="x"> </span><span class="n">data</span><span class="p">)</span><span class="x">
+    </span><span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">response</span><span class="p">)</span><span class="x">
+</span><span class="p">}</span><span class="x">
+</span></code></pre>
+<blockquote>
+<p>应答样例</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OK"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id_info"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+62895804603449,+6289508619964"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"phone_info"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="s2">"3209406609990002"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"phone"</span><span class="p">:</span><span class="s2">"+62895804603449,+6289508619964"</span><span class="w">
+    </span><span class="p">}]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-7'>HTTP请求</h3>
+<p><code>POST https://api.izi.credit/v1/mutiphone</code></p>
+<h3 id='1f9ac54b15-7'>请求参数</h3>
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>id</code></td>
+<td><code>必选</code>，<code>字符串</code>，查询人员的身份证号</td>
+</tr>
+<tr>
+<td><code>phone</code></td>
+<td><code>可选</code>，<code>字符串</code>，查询人员的电话号</td>
+</tr>
+</tbody></table>
+<h3 id='afeebde3f7-8'>返回数据格式</h3>
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>status</code></td>
+<td>状态码</td>
+</tr>
+<tr>
+<td><code>message</code></td>
+<td><code>id_info</code>：查询身份证号码下面的手机号</td>
+</tr>
+<tr>
+<td></td>
+<td><code>phone_info</code>：查询手机号下的相关洗洗</td>
+</tr>
+<tr>
+<td></td>
+<td><code>id</code>：查询手机号所属的身份证号</td>
+</tr>
+<tr>
+<td></td>
+<td><code>phone</code>：查询手机号所属身份证号下的手机号信息</td>
+</tr>
+</tbody></table>
+<h3 id='9ea07c6cb3-8'>状态码说明</h3>
+<table><thead>
+<tr>
+<th>status</th>
+<th>说明</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>OK</code></td>
+<td>检测成功计费，<code>message</code>为检测结论</td>
+</tr>
+<tr>
+<td><code>INVALID_PHONE_NUMBER</code></td>
+<td><code>免费</code>，输入的电话号码不合法</td>
+</tr>
+<tr>
+<td><code>INVALID_ID_NUMBER</code></td>
+<td><code>免费</code>，输入的电话号码不合法</td>
+</tr>
+<tr>
+<td><code>NOT_FOUND</code></td>
 <td><code>免费</code>，未查询到结果</td>
 </tr>
 <tr>
