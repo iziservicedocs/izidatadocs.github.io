@@ -446,7 +446,7 @@
               </ul>
           </li>
           <li>
-            <a href="#whatsapp" class="toc-h1 toc-link" data-title="whatsapp是否开通">whatsapp是否开通</a>
+            <a href="#whatsapp" class="toc-h1 toc-link" data-title="WhatsApp开通检测">WhatsApp开通检测</a>
               <ul class="toc-list-h2">
                   <li>
                     <a href="#http-13" class="toc-h2 toc-link" data-title="HTTP请求">HTTP请求</a>
@@ -456,6 +456,9 @@
                   </li>
                   <li>
                     <a href="#afeebde3f7-13" class="toc-h2 toc-link" data-title="返回数据格式">返回数据格式</a>
+                  </li>
+                  <li>
+                    <a href="#af989d8988" class="toc-h2 toc-link" data-title="请求方式">请求方式</a>
                   </li>
                   <li>
                     <a href="#9ea07c6cb3-14" class="toc-h2 toc-link" data-title="状态码说明">状态码说明</a>
@@ -2687,8 +2690,8 @@
 <td>未知</td>
 </tr>
 </tbody></table>
-<h1 id='whatsapp'>whatsapp是否开通</h1>
-<p>根据输入的号码，查询输入号码的whatsapp是否开通。</p>
+<h1 id='whatsapp'>WhatsApp开通检测</h1>
+<p>根据输入的号码，检测输入号码的WhatsApp是否开通。</p>
 
 <blockquote>
 <p>代码示例：</p>
@@ -2744,7 +2747,7 @@
 </span><span class="p">}</span><span class="x">
 </span></code></pre>
 <blockquote>
-<p>被查询的号码开通了whatsapp</p>
+<p>被查询的号码开通了WhatsApp</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OK"</span><span class="p">,</span><span class="w">
@@ -2756,7 +2759,7 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <blockquote>
-<p>被查询的号码未开通whatsapp </p>
+<p>被查询的号码未开通WhatsApp </p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OK"</span><span class="p">,</span><span class="w">
@@ -2816,6 +2819,8 @@
 <td><code>ts</code>：发起查询的国际标准时间</td>
 </tr>
 </tbody></table>
+<h3 id='af989d8988'>请求方式</h3>
+<p><code>当whatsapp返回为checking，需要间隔一段时间(&gt;2min)再次发起请求</code></p>
 <h3 id='9ea07c6cb3-14'>状态码说明</h3>
 <table><thead>
 <tr>
