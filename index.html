@@ -2753,8 +2753,7 @@
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OK"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+6282299999999"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"whatsapp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"yes"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"ts"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-02-22T06:43:18.272590966Z"</span><span class="w">
+    </span><span class="s2">"whatsapp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"yes"</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
@@ -2765,8 +2764,7 @@
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OK"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+6282299999999"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"whatsapp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"no"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"ts"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-02-22T06:43:18.272590966Z"</span><span class="w">
+    </span><span class="s2">"whatsapp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"no"</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
@@ -2777,8 +2775,7 @@
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OK"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+6282299999999"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"whatsapp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"checking"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"ts"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-02-22T06:43:18.272590966Z"</span><span class="w">
+    </span><span class="s2">"whatsapp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"checking"</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-13'>HTTP请求</h3>
@@ -2814,13 +2811,9 @@
 <td></td>
 <td><code>whatsapp</code>：被查询号码是否开通了whatsapp</td>
 </tr>
-<tr>
-<td></td>
-<td><code>ts</code>：发起查询的国际标准时间</td>
-</tr>
 </tbody></table>
 <h3 id='af989d8988'>请求方式</h3>
-<p><code>当whatsapp返回为checking，需要间隔一段时间(&gt;2min)再次发起请求</code></p>
+<p><code>当whatsapp值为checking，需要间隔一段时间(&gt;2min)再次发起请求</code></p>
 <h3 id='9ea07c6cb3-14'>状态码说明</h3>
 <table><thead>
 <tr>
@@ -2830,7 +2823,7 @@
 </thead><tbody>
 <tr>
 <td><code>OK</code></td>
-<td>whatsapp为checking查询免费，其他计费，<code>message</code>为查询结论</td>
+<td>whatsapp值为checking查询免费，其他计费，<code>message</code>为查询结论</td>
 </tr>
 <tr>
 <td><code>FAIL</code></td>
