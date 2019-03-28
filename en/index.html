@@ -2715,7 +2715,8 @@ Please make sure to replace <code>YOUR_ACCESS_KEY</code> and <code>YOUR_SECRET_K
 
 <span class="n">api</span> <span class="o">=</span> <span class="n">izi</span><span class="o">.</span><span class="n">client</span><span class="p">(</span><span class="s">'YOUR_ACCESS_KEY'</span><span class="p">,</span> <span class="s">'YOUR_SECRET_KEY'</span><span class="p">)</span>
 <span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="s">"number"</span><span class="p">:</span> <span class="s">"0895806600002"</span>
+  <span class="s">"number"</span><span class="p">:</span> <span class="s">"0895806600002"</span><span class="p">,</span>
+  <span class="s">"callback"</span><span class="p">:</span> <span class="s">"https://YOUR_CALLBACK_URL"</span>
 <span class="p">}</span>
 <span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.izi.credit/v1/iswhatsapp"</span>
 <span class="n">response</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
@@ -2726,7 +2727,8 @@ Please make sure to replace <code>YOUR_ACCESS_KEY</code> and <code>YOUR_SECRET_K
 <span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">IziClient</span><span class="p">(</span><span class="s2">"YOUR_ACCESS_KEY"</span><span class="p">,</span> <span class="s2">"YOUR_SECRET_KEY"</span><span class="p">);</span>
 <span class="nv">$url</span> <span class="o">=</span> <span class="s2">"https://api.izi.credit/v1/iswhatsapp"</span><span class="p">;</span>
 <span class="nv">$data</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
-  <span class="s2">"number"</span><span class="o">=&gt;</span><span class="s2">"0895806600002"</span>
+  <span class="s2">"number"</span><span class="o">=&gt;</span><span class="s2">"0895806600002"</span><span class="p">,</span>
+  <span class="s2">"callback"</span><span class="o">=&gt;</span><span class="s2">"https://YOUR_CALLBACK_URL"</span>
 <span class="p">);</span>
 <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="na">request</span><span class="p">(</span><span class="nv">$url</span><span class="p">,</span> <span class="nv">$data</span><span class="p">);</span>
 <span class="k">print</span><span class="p">(</span><span class="nv">$response</span><span class="p">);</span>
@@ -2739,6 +2741,7 @@ Please make sure to replace <code>YOUR_ACCESS_KEY</code> and <code>YOUR_SECRET_K
         <span class="n">Client</span> <span class="n">api</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Client</span><span class="o">(</span><span class="s">"YOUR_ACCESS_KEY"</span><span class="o">,</span> <span class="s">"YOUR_SECRET_KEY"</span><span class="o">);</span>
         <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">data</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;&gt;();</span>
         <span class="n">data</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"number"</span><span class="o">,</span> <span class="s">"0895806600002"</span><span class="o">);</span>
+        <span class="n">data</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"callback"</span><span class="o">,</span> <span class="s">"https://YOUR_CALLBACK_URL"</span><span class="o">);</span>
         <span class="n">String</span> <span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.izi.credit/v1/iswhatsapp"</span><span class="o">;</span>
         <span class="n">String</span> <span class="n">response</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="na">Request</span><span class="o">(</span><span class="n">url</span><span class="o">,</span> <span class="n">data</span><span class="o">);</span>
         <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">response</span><span class="o">);</span>
@@ -2755,6 +2758,7 @@ Please make sure to replace <code>YOUR_ACCESS_KEY</code> and <code>YOUR_SECRET_K
     </span><span class="n">api</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">gosdk</span><span class="o">.</span><span class="n">NewClient</span><span class="p">(</span><span class="s">"YOUR_ACCESS_KEY"</span><span class="p">,</span><span class="x"> </span><span class="s">"YOUR_SECRET_KEY"</span><span class="p">)</span><span class="x">
     </span><span class="n">data</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="k">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">string</span><span class="p">{</span><span class="x">
         </span><span class="s">"number"</span><span class="o">:</span><span class="x"> </span><span class="s">"0895806600002"</span><span class="p">,</span><span class="x">
+        </span><span class="s">"callback"</span><span class="o">:</span><span class="x"> </span><span class="s">"https://YOUR_CALLBACK_URL"</span><span class="p">,</span><span class="x">
     </span><span class="p">}</span><span class="x">
     </span><span class="n">url</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="s">"https://api.izi.credit/v1/iswhatsapp"</span><span class="x">
     </span><span class="n">response</span><span class="p">,</span><span class="x"> </span><span class="n">_</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">api</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="n">url</span><span class="p">,</span><span class="x"> </span><span class="n">data</span><span class="p">)</span><span class="x">
@@ -2762,7 +2766,7 @@ Please make sure to replace <code>YOUR_ACCESS_KEY</code> and <code>YOUR_SECRET_K
 </span><span class="p">}</span><span class="x">
 </span></code></pre>
 <blockquote>
-<p>Response for the input number have already registered whatsapp</p>
+<p>Non-callback request (callback is empty), response for the input number have already registered whatsapp</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OK"</span><span class="p">,</span><span class="w">
@@ -2773,7 +2777,7 @@ Please make sure to replace <code>YOUR_ACCESS_KEY</code> and <code>YOUR_SECRET_K
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <blockquote>
-<p>Response for the input number not register whatsapp</p>
+<p>Non-callback request (callback is empty), response for the input number not register whatsapp</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OK"</span><span class="p">,</span><span class="w">
@@ -2784,7 +2788,7 @@ Please make sure to replace <code>YOUR_ACCESS_KEY</code> and <code>YOUR_SECRET_K
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <blockquote>
-<p>Response for the input number is checking</p>
+<p>Non-callback request (callback is empty), response for the input number is checking</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OK"</span><span class="p">,</span><span class="w">
@@ -2793,7 +2797,13 @@ Please make sure to replace <code>YOUR_ACCESS_KEY</code> and <code>YOUR_SECRET_K
     </span><span class="s2">"whatsapp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"checking"</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='http-request-13'>HTTP request</h3>
+</span></code></pre>
+<blockquote>
+<p>Return by callback address (callback address) </p>
+</blockquote>
+
+<p><code>GET https://YOUR_CALLBACKURL/?number=%2B62813116594289&amp;whatsapp=no</code></p>
+<h3 id='http-request-13'>HTTP request</h3>
 <p><code>POST https://api.izi.credit/v1/iswhatsapp</code></p>
 <h3 id='request-parameters-13'>Request parameters</h3>
 <table><thead>
@@ -2805,6 +2815,10 @@ Please make sure to replace <code>YOUR_ACCESS_KEY</code> and <code>YOUR_SECRET_K
 <tr>
 <td><code>number</code></td>
 <td><code>string</code>, phone number</td>
+</tr>
+<tr>
+<td><code>callback</code></td>
+<td><code>optional</code>, <code>string</code>, callback url</td>
 </tr>
 </tbody></table>
 <h3 id='response-format-13'>Response format</h3>
@@ -2828,7 +2842,8 @@ Please make sure to replace <code>YOUR_ACCESS_KEY</code> and <code>YOUR_SECRET_K
 </tr>
 </tbody></table>
 <h3 id='request-method'>Request method</h3>
-<p><code>When the whatsapp value is checking, it needs to be detected again for a period of time (&gt;3min).</code></p>
+<p><code>1、When the whatsapp value is checking, it needs to be detected again for a period of time (&gt;3min).</code>
+<code>2、When the field callback is not empty, it is returned to the callback URL once the result is queried.</code></p>
 <h3 id='status-code-14'>Status code</h3>
 <table><thead>
 <tr>
