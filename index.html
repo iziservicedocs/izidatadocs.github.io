@@ -2875,9 +2875,8 @@
 <blockquote>
 <p>通过回调地址进行返回(callback地址) </p>
 </blockquote>
-
-<p><code>GET https://YOUR_CALLBACKURL/?number=%2B62813116594289&amp;whatsapp=no</code></p>
-<h3 id='http-13'>HTTP请求</h3>
+<pre class="highlight json tab-json"><code><span class="err">GET</span><span class="w"> </span><span class="err">https</span><span class="p">:</span><span class="err">//YOUR_CALLBACKURL/?number=%</span><span class="mi">2</span><span class="err">B</span><span class="mi">62813116594289</span><span class="err">&amp;whatsapp=no</span><span class="w">
+</span></code></pre><h3 id='http-13'>HTTP请求</h3>
 <p><code>POST https://api.izi.credit/v1/iswhatsapp</code></p>
 <h3 id='1f9ac54b15-13'>请求参数</h3>
 <table><thead>
@@ -2917,7 +2916,7 @@
 </tbody></table>
 <h3 id='af989d8988'>请求方式</h3>
 <p><code>1、callback为空时，当whatsapp值为checking，需要间隔一段时间(&gt;2min)再次发起检测请求</code>
-<code>2、callback不为空时，一旦查询到结果就返回给回调URL</code></p>
+<code>2、callback不为空时，一旦查询到结果就返回给回调URL，调用方式为GET https://YOUR_CALLBACKURL/?number=%2B62813116594289&amp;whatsapp=no</code></p>
 <h3 id='9ea07c6cb3-14'>状态码说明</h3>
 <table><thead>
 <tr>
