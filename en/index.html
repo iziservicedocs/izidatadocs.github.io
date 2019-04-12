@@ -2373,14 +2373,14 @@ Please make sure to replace <code>YOUR_ACCESS_KEY</code> and <code>YOUR_SECRET_K
   <span class="s">"id"</span><span class="p">:</span> <span class="s">"3171024302821001"</span><span class="p">,</span>
   <span class="s">"phone"</span><span class="p">:</span> <span class="s">"+62895806600002"</span>
 <span class="p">}</span>
-<span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.izi.credit/v1/phonevertify"</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.izi.credit/v1/phoneverify"</span>
 <span class="n">response</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
 </code></pre><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
 <span class="k">require_once</span> <span class="s2">"izi/IziClient.php"</span><span class="p">;</span>
 
 <span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">IziClient</span><span class="p">(</span><span class="s2">"YOUR_ACCESS_KEY"</span><span class="p">,</span> <span class="s2">"YOUR_SECRET_KEY"</span><span class="p">);</span>
-<span class="nv">$url</span> <span class="o">=</span> <span class="s2">"https://api.izi.credit/v1/phonevertify"</span><span class="p">;</span>
+<span class="nv">$url</span> <span class="o">=</span> <span class="s2">"https://api.izi.credit/v1/phoneverify"</span><span class="p">;</span>
 <span class="nv">$data</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
   <span class="s2">"id"</span><span class="o">=&gt;</span><span class="s2">"3171024302821001"</span><span class="p">,</span>
   <span class="s2">"phone"</span><span class="o">=&gt;</span><span class="s2">"+62895806600002"</span>
@@ -2397,7 +2397,7 @@ Please make sure to replace <code>YOUR_ACCESS_KEY</code> and <code>YOUR_SECRET_K
         <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">data</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;&gt;();</span>
         <span class="n">data</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"id"</span><span class="o">,</span> <span class="s">"3171024302821001"</span><span class="o">);</span>
         <span class="n">data</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"phone"</span><span class="o">,</span> <span class="s">"+62895806600002"</span><span class="o">);</span>
-        <span class="n">String</span> <span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.izi.credit/v1/phonevertify"</span><span class="o">;</span>
+        <span class="n">String</span> <span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.izi.credit/v1/phoneverify"</span><span class="o">;</span>
         <span class="n">String</span> <span class="n">response</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="na">Request</span><span class="o">(</span><span class="n">url</span><span class="o">,</span> <span class="n">data</span><span class="o">);</span>
         <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">response</span><span class="o">);</span>
     <span class="o">}</span>
@@ -2415,13 +2415,13 @@ Please make sure to replace <code>YOUR_ACCESS_KEY</code> and <code>YOUR_SECRET_K
         </span><span class="s">"id"</span><span class="o">:</span><span class="x"> </span><span class="s">"3171024302821001"</span><span class="p">,</span><span class="x">
         </span><span class="s">"phone"</span><span class="o">:</span><span class="x"> </span><span class="s">"+62895806600002"</span><span class="p">,</span><span class="x">
     </span><span class="p">}</span><span class="x">
-    </span><span class="n">url</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="s">"https://api.izi.credit/v1/phonevertify"</span><span class="x">
+    </span><span class="n">url</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="s">"https://api.izi.credit/v1/phoneverify"</span><span class="x">
     </span><span class="n">response</span><span class="p">,</span><span class="x"> </span><span class="n">_</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">api</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="n">url</span><span class="p">,</span><span class="x"> </span><span class="n">data</span><span class="p">)</span><span class="x">
     </span><span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">response</span><span class="p">)</span><span class="x">
 </span><span class="p">}</span><span class="x">
 </span></code></pre>
 <blockquote>
-<p>Response for phone number authenticated</p>
+<p>Response for phone number verification passed</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OK"</span><span class="p">,</span><span class="w">
@@ -2429,7 +2429,7 @@ Please make sure to replace <code>YOUR_ACCESS_KEY</code> and <code>YOUR_SECRET_K
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <blockquote>
-<p>Response for phone number not authenticated</p>
+<p>Response for phone number verification failed</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OK"</span><span class="p">,</span><span class="w">
@@ -2444,7 +2444,7 @@ Please make sure to replace <code>YOUR_ACCESS_KEY</code> and <code>YOUR_SECRET_K
   </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"This phone and id can’t be found in our system"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request-11'>HTTP request</h3>
-<p><code>POST https://api.izi.credit/v1/phonevertify</code></p>
+<p><code>POST https://api.izi.credit/v1/phoneverify</code></p>
 <h3 id='request-parameters-11'>Request parameters</h3>
 <table><thead>
 <tr>
