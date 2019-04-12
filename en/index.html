@@ -2280,11 +2280,49 @@ Please make sure to replace <code>YOUR_ACCESS_KEY</code> and <code>YOUR_SECRET_K
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <blockquote>
+<p>Input phone number is invalid</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"INVALID_PHONE_NUMBER"</span><span class="p">,</span><span class="w"> 
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Invalid phone number, please check your phone number format"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Input ktp is invalid</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"INVALID_ID_NUMBER"</span><span class="p">,</span><span class="w"> 
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Invalid ID number, please check the NIK format"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Input ktp is the owner of input phone number</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ALL_FOUND"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id_info"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+6281284500000"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"phone_info"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3216182206820001"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+6281284500000"</span><span class="w">
+    </span><span class="p">}]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
 <p>Response for empty result</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NOT_FOUND"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Id and phone can’t be found in our system"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Server error, please try again later</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"RETRY_LATER"</span><span class="p">,</span><span class="w"> 
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Service is not available right now, please try again later"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request-10'>HTTP request</h3>
 <p><code>POST https://api.izi.credit/v1/multiphonedetail</code></p>
