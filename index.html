@@ -361,19 +361,19 @@
             <a href="#070f261356" class="toc-h1 toc-link" data-title="号码在网时长">号码在网时长</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#v1-v2-http" class="toc-h2 toc-link" data-title="v1、v2 HTTP 请求">v1、v2 HTTP 请求</a>
+                    <a href="#http-v1-v2" class="toc-h2 toc-link" data-title="HTTP 请求(v1、v2)">HTTP 请求(v1、v2)</a>
                   </li>
                   <li>
-                    <a href="#v3-http" class="toc-h2 toc-link" data-title="v3 HTTP 请求">v3 HTTP 请求</a>
+                    <a href="#http-v3" class="toc-h2 toc-link" data-title="HTTP 请求(v3)">HTTP 请求(v3)</a>
                   </li>
                   <li>
                     <a href="#1f9ac54b15-8" class="toc-h2 toc-link" data-title="请求参数">请求参数</a>
                   </li>
                   <li>
-                    <a href="#v1-v2" class="toc-h2 toc-link" data-title="v1、v2 返回数据格式">v1、v2 返回数据格式</a>
+                    <a href="#v1-v2" class="toc-h2 toc-link" data-title="返回数据格式(v1、v2)">返回数据格式(v1、v2)</a>
                   </li>
                   <li>
-                    <a href="#v3-2" class="toc-h2 toc-link" data-title="v3 返回数据格式">v3 返回数据格式</a>
+                    <a href="#v3-2" class="toc-h2 toc-link" data-title="返回数据格式(v3)">返回数据格式(v3)</a>
                   </li>
                   <li>
                     <a href="#9ea07c6cb3-9" class="toc-h2 toc-link" data-title="状态码说明">状态码说明</a>
@@ -1986,18 +1986,18 @@
 </span><span class="p">}</span><span class="x">
 </span></code></pre>
 <blockquote>
-<p>v1、v2输入的phone查询到结果的应答样例</p>
+<p>输入的phone查询到结果的应答样例(v1、v2)</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OK"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+62895806600002"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"age"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="w">
+    </span><span class="s2">"age"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3"</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <blockquote>
-<p>v3输入的phone查询到结果的应答样例</p>
+<p>输入的phone查询到结果的应答样例(v3)</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OK"</span><span class="p">,</span><span class="w">
@@ -2015,9 +2015,9 @@
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PHONENUMBER_NOT_FOUND"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"This phone number can’t be found in our system"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='v1-v2-http'>v1、v2 HTTP 请求</h3>
+</span></code></pre><h3 id='http-v1-v2'>HTTP 请求(v1、v2)</h3>
 <p><code>POST https://api.izi.credit/v2/phoneage</code></p>
-<h3 id='v3-http'>v3 HTTP 请求</h3>
+<h3 id='http-v3'>HTTP 请求(v3)</h3>
 <p><code>POST https://api.izi.credit/v3/phoneage</code></p>
 <h3 id='1f9ac54b15-8'>请求参数</h3>
 <table><thead>
@@ -2031,7 +2031,7 @@
 <td><code>必选</code>，<code>字符串</code>，电话号码</td>
 </tr>
 </tbody></table>
-<h3 id='v1-v2'>v1、v2 返回数据格式</h3>
+<h3 id='v1-v2'>返回数据格式(v1、v2)</h3>
 <table><thead>
 <tr>
 <th>参数</th>
@@ -2051,7 +2051,7 @@
 <td><code>age</code>：在网时长，1：[0-1个月)，2：[1-3个月)，3：[3-5个月)，4：[5-7个月)，5：[7-9个月)，6：[9个月,+∞)</td>
 </tr>
 </tbody></table>
-<h3 id='v3-2'>v3 返回数据格式</h3>
+<h3 id='v3-2'>返回数据格式(v3)</h3>
 <table><thead>
 <tr>
 <th>参数</th>
@@ -2068,7 +2068,7 @@
 </tr>
 <tr>
 <td></td>
-<td><code>age</code>：在网时长详情</td>
+<td><code>age</code>：在网时长详情: 0-1month、1-2month、2-3month、3-4month、4-5month、5-6month、6-8month、8-10month、10-12month、12month+</td>
 </tr>
 </tbody></table>
 <h3 id='9ea07c6cb3-9'>状态码说明</h3>
