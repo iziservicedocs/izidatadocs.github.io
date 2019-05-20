@@ -723,6 +723,14 @@
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PERSON_NOT_FOUND"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"This person can’t be found in our system"</span><span class="w">
 </span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>请求的md5在系统中不存在</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="s2">"NOT_FOUND_MD5"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="s2">"This md5 can't be found in our system"</span><span class="w">
+</span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http'>HTTP请求</h3>
 <p><code>POST https://api.izi.credit/v2/identitycheck</code></p>
 <h3 id='1f9ac54b15'>请求参数</h3>
@@ -739,6 +747,10 @@
 <tr>
 <td><code>id</code></td>
 <td><code>字符串</code>，认证人员的身份证号<code>NIK</code>，格式为16位阿拉伯数字</td>
+</tr>
+<tr>
+<td><code>md5</code></td>
+<td><code>可选</code>，<code>字符串</code>，参数是否md5加密</td>
 </tr>
 </tbody></table>
 <h3 id='afeebde3f7-2'>返回数据格式</h3>
@@ -958,6 +970,14 @@
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PERSON_NOT_FOUND"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"This person can’t be found in our system"</span><span class="w">
 </span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>请求的md5在系统中不存在</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="s2">"NOT_FOUND_MD5"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="s2">"This md5 can't be found in our system"</span><span class="w">
+</span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-2'>HTTP请求</h3>
 <p><code>POST https://api.izi.credit/v3/identitycheck</code></p>
 <h3 id='1f9ac54b15-2'>请求参数</h3>
@@ -974,6 +994,10 @@
 <tr>
 <td><code>id</code></td>
 <td><code>字符串</code>，认证人员的身份证号<code>NIK</code>，格式为16位阿拉伯数字</td>
+</tr>
+<tr>
+<td><code>md5</code></td>
+<td><code>可选</code>，<code>字符串</code>，参数是否md5加密</td>
 </tr>
 </tbody></table>
 <h3 id='afeebde3f7-3'>返回数据格式</h3>
@@ -1161,6 +1185,14 @@
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PERSON_NOT_FOUND"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"This person can’t be found in our system"</span><span class="w">
 </span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>请求的md5在系统中不存在</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="s2">"NOT_FOUND_MD5"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="s2">"This md5 can't be found in our system"</span><span class="w">
+</span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-3'>HTTP请求</h3>
 <p><code>POST https://api.izi.credit/v1/iziidcheck</code></p>
 <h3 id='1f9ac54b15-3'>请求参数</h3>
@@ -1177,6 +1209,10 @@
 <tr>
 <td><code>id</code></td>
 <td><code>字符串</code>，认证人员的身份证号<code>NIK</code>，格式为16位阿拉伯数字</td>
+</tr>
+<tr>
+<td><code>md5</code></td>
+<td><code>可选</code>，<code>字符串</code>，参数是否md5加密</td>
 </tr>
 </tbody></table>
 <h3 id='afeebde3f7-4'>返回数据格式</h3>
@@ -1887,6 +1923,14 @@
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OK"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NEEDS_VERIFICATION"</span><span class="w">
 </span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>请求的md5在系统中不存在</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="s2">"NOT_FOUND_MD5"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="s2">"This md5 can't be found in our system"</span><span class="w">
+</span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-7'>HTTP请求</h3>
 <p><code>POST https://api.izi.credit/v1/blacklist</code></p>
 <h3 id='1f9ac54b15-7'>请求参数</h3>
@@ -1907,6 +1951,10 @@
 <tr>
 <td><code>phone</code></td>
 <td><code>可选</code>，<code>字符串</code>，检测人员的电话号码</td>
+</tr>
+<tr>
+<td><code>md5</code></td>
+<td><code>可选</code>，<code>字符串</code>，参数是否md5加密，号码需要以E164格式进行md5加密</td>
 </tr>
 </tbody></table>
 <h3 id='afeebde3f7-8'>返回数据格式</h3>
@@ -2055,6 +2103,14 @@
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PHONENUMBER_NOT_FOUND"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"This phone number can’t be found in our system"</span><span class="w">
 </span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>请求的md5在系统中不存在</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="s2">"NOT_FOUND_MD5"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="s2">"This md5 can't be found in our system"</span><span class="w">
+</span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-v1-v2'>HTTP 请求(v1、v2)</h3>
 <p><code>POST https://api.izi.credit/v2/phoneage</code></p>
 <h3 id='http-v3'>HTTP 请求(v3)</h3>
@@ -2069,6 +2125,10 @@
 <tr>
 <td><code>phone</code></td>
 <td><code>必选</code>，<code>字符串</code>，电话号码</td>
+</tr>
+<tr>
+<td><code>md5</code></td>
+<td><code>可选</code>，<code>字符串</code>，参数是否md5加密，号码需要以E164格式进行md5加密</td>
 </tr>
 </tbody></table>
 <h3 id='v1-v2'>返回数据格式(v1、v2)</h3>
@@ -2247,6 +2307,14 @@
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NOT_FOUND"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"This phone and id can’t be found in our system"</span><span class="w">
 </span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>请求的md5在系统中不存在</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="s2">"NOT_FOUND_MD5"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="s2">"This md5 can't be found in our system"</span><span class="w">
+</span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-8'>HTTP请求</h3>
 <p><code>POST https://api.izi.credit/v1/multiphonecount</code></p>
 <h3 id='1f9ac54b15-9'>请求参数</h3>
@@ -2263,6 +2331,10 @@
 <tr>
 <td><code>phone</code></td>
 <td><code>可选</code>，<code>字符串</code>，查询人员的电话号</td>
+</tr>
+<tr>
+<td><code>md5</code></td>
+<td><code>可选</code>，<code>字符串</code>，参数是否md5加密，号码需要以E164格式进行md5加密</td>
 </tr>
 </tbody></table>
 <h3 id='afeebde3f7-9'>返回数据格式</h3>
@@ -2473,6 +2545,14 @@
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"RETRY_LATER"</span><span class="p">,</span><span class="w"> 
   </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Service is not available right now, please try again later"</span><span class="w">
 </span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>请求的md5在系统中不存在</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="s2">"NOT_FOUND_MD5"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="s2">"This md5 can't be found in our system"</span><span class="w">
+</span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-9'>HTTP请求</h3>
 <p><code>POST https://api.izi.credit/v1/multiphonedetail</code></p>
 <h3 id='1f9ac54b15-10'>请求参数</h3>
@@ -2489,6 +2569,10 @@
 <tr>
 <td><code>phone</code></td>
 <td><code>可选</code>，<code>字符串</code>，查询人员的电话号</td>
+</tr>
+<tr>
+<td><code>md5</code></td>
+<td><code>可选</code>，<code>字符串</code>，参数是否md5加密，号码需要以E164格式进行md5加密</td>
 </tr>
 </tbody></table>
 <h3 id='afeebde3f7-10'>返回数据格式</h3>
@@ -2634,6 +2718,14 @@
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NOT_FOUND"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"This phone and id can’t be found in our system"</span><span class="w">
 </span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>请求的md5在系统中不存在</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="s2">"NOT_FOUND_MD5"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="s2">"This md5 can't be found in our system"</span><span class="w">
+</span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-10'>HTTP请求</h3>
 <p><code>POST https://api.izi.credit/v1/phoneverify</code></p>
 <h3 id='1f9ac54b15-11'>请求参数</h3>
@@ -2650,6 +2742,10 @@
 <tr>
 <td><code>id</code></td>
 <td><code>必选</code>，<code>字符串</code>，需要验证号码对应的身份证</td>
+</tr>
+<tr>
+<td><code>md5</code></td>
+<td><code>可选</code>，<code>字符串</code>，参数是否md5加密，号码需要以E164格式进行md5加密</td>
 </tr>
 </tbody></table>
 <h3 id='afeebde3f7-11'>返回数据格式</h3>
@@ -2985,6 +3081,14 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <blockquote>
+<p>请求的md5在系统中不存在</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="s2">"NOT_FOUND_MD5"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="s2">"This md5 can't be found in our system"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
 <p>通过回调地址进行返回(callback地址) </p>
 </blockquote>
 <pre class="highlight shell tab-shell"><code>GET https://YOUR_CALLBACKURL/?number<span class="o">=</span>%2B62813116594289&amp;whatsapp<span class="o">=</span>no
@@ -3000,6 +3104,10 @@
 <tr>
 <td><code>number</code></td>
 <td><code>必选</code>，<code>字符串</code>，查询人员的电话号</td>
+</tr>
+<tr>
+<td><code>md5</code></td>
+<td><code>可选</code>，<code>字符串</code>，参数是否md5加密，号码需要以E164格式进行md5加密</td>
 </tr>
 <tr>
 <td><code>callback</code></td>
@@ -3151,6 +3259,14 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <blockquote>
+<p>请求的md5在系统中不存在</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="s2">"NOT_FOUND_MD5"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="s2">"This md5 can't be found in our system"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
 <p>通过回调地址进行返回(callback地址) </p>
 </blockquote>
 <pre class="highlight shell tab-shell"><code>GET https://YOUR_CALLBACKURL/?number<span class="o">=</span>%2B62813116594289&amp;whatsapp<span class="o">=</span>no&amp;register_date<span class="o">=</span>20180825&amp;signature<span class="o">=</span>Saya+suka+Indonesia&amp;business_user<span class="o">=</span>no&amp;avatar<span class="o">=</span>yes
@@ -3166,6 +3282,10 @@
 <tr>
 <td><code>number</code></td>
 <td><code>必选</code>，<code>字符串</code>，查询人员的电话号</td>
+</tr>
+<tr>
+<td><code>md5</code></td>
+<td><code>可选</code>，<code>字符串</code>，参数是否md5加密，号码需要以E164格式进行md5加密</td>
 </tr>
 <tr>
 <td><code>callback</code></td>
@@ -3329,6 +3449,14 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <blockquote>
+<p>请求的md5在系统中不存在</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="s2">"NOT_FOUND_MD5"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="s2">"This md5 can't be found in our system"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
 <p>通过回调地址进行返回(callback地址) </p>
 </blockquote>
 <pre class="highlight shell tab-shell"><code>GET https://YOUR_CALLBACKURL/?number<span class="o">=</span>%2B62813116594289&amp;facebook<span class="o">=</span>no
@@ -3344,6 +3472,10 @@
 <tr>
 <td><code>number</code></td>
 <td><code>必选</code>，<code>字符串</code>，查询人员的电话号</td>
+</tr>
+<tr>
+<td><code>md5</code></td>
+<td><code>可选</code>，<code>字符串</code>，参数是否md5加密，号码需要以E164格式进行md5加密</td>
 </tr>
 <tr>
 <td><code>callback</code></td>
@@ -3521,6 +3653,14 @@
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"RETRY_LATER"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Service is not available right now, please try again later"</span><span class="w">
 </span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>请求的md5在系统中不存在</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="s2">"NOT_FOUND_MD5"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="s2">"This md5 can't be found in our system"</span><span class="w">
+</span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-15'>HTTP请求（根据身份证获取）</h3>
 <p><code>POST https://api.izi.credit/v1/idinquiries</code></p>
 <h3 id='1f9ac54b15-16'>请求参数</h3>
@@ -3532,7 +3672,11 @@
 </thead><tbody>
 <tr>
 <td><code>id</code></td>
-<td><code>字符串</code>，身份证号码</td>
+<td><code>必选</code>，<code>字符串</code>，身份证号码</td>
+</tr>
+<tr>
+<td><code>md5</code></td>
+<td><code>可选</code>，<code>字符串</code>，参数是否md5加密</td>
 </tr>
 </tbody></table>
 <h3 id='http-16'>HTTP请求（根据号码获取）</h3>
@@ -3546,7 +3690,11 @@
 </thead><tbody>
 <tr>
 <td><code>phone</code></td>
-<td><code>字符串</code>，电话号码</td>
+<td><code>必选</code>，<code>字符串</code>，电话号码</td>
+</tr>
+<tr>
+<td><code>md5</code></td>
+<td><code>可选</code>，<code>字符串</code>，参数是否md5加密，号码需要以E164格式进行md5加密</td>
 </tr>
 </tbody></table>
 <h3 id='afeebde3f7-15'>返回数据格式</h3>
