@@ -3282,7 +3282,7 @@
 </tr>
 </tbody></table>
 <h1 id='whatsapp-2'>WhatsApp详情</h1>
-<p>根据输入的号码，检测输入号码的WhatsApp的详情，是否是whatsapp账户、注册时间、签名、是否是企业账户、是否有头像。</p>
+<p>根据输入的号码，检测输入号码的WhatsApp的详情，是否是whatsapp账户、状态更新时间、签名、是否是企业账户、是否有头像。</p>
 
 <blockquote>
 <p>代码示例：</p>
@@ -3360,7 +3360,7 @@
   </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+6282299999999"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"whatsapp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"yes"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"register_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20180825"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"status_update"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20180825"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"signature"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Saya suka Indonesia"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"business_user"</span><span class="p">:</span><span class="w"> </span><span class="s2">"no"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"avatar"</span><span class="p">:</span><span class="w"> </span><span class="s2">"yes"</span><span class="w">
@@ -3400,7 +3400,7 @@
 <blockquote>
 <p>通过回调地址进行返回(callback地址) </p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>GET https://YOUR_CALLBACKURL/?number<span class="o">=</span>%2B62813116594289&amp;whatsapp<span class="o">=</span>no&amp;register_date<span class="o">=</span>20180825&amp;signature<span class="o">=</span>Saya+suka+Indonesia&amp;business_user<span class="o">=</span>no&amp;avatar<span class="o">=</span>yes
+<pre class="highlight shell tab-shell"><code>GET https://YOUR_CALLBACKURL/?number<span class="o">=</span>%2B62813116594289&amp;whatsapp<span class="o">=</span>no&amp;status_update<span class="o">=</span>20180825&amp;signature<span class="o">=</span>Saya+suka+Indonesia&amp;business_user<span class="o">=</span>no&amp;avatar<span class="o">=</span>yes
 </code></pre><h3 id='http-13'>HTTP请求</h3>
 <p><code>POST https://api.izi.credit/v1/iswadetail</code></p>
 <h3 id='1f9ac54b15-14'>请求参数</h3>
@@ -3448,7 +3448,7 @@
 </tr>
 <tr>
 <td></td>
-<td><code>register_date</code>：注册时间</td>
+<td><code>status_update</code>：状态更新时间</td>
 </tr>
 <tr>
 <td></td>
@@ -3465,7 +3465,7 @@
 </tbody></table>
 <h3 id='af989d8988-2'>请求方式</h3>
 <p><code>1、callback为空时，当whatsapp值为checking，需要间隔一段时间(&gt;2min)再次发起检测请求</code>
-<code>2、callback不为空时，一旦查询到结果就返回给回调URL，调用方式为GET https://YOUR_CALLBACKURL/?number=%2B62813116594289&amp;whatsapp=no&amp;register_date=20180825&amp;signature=Saya+suka+Indonesia&amp;business_user=no&amp;avatar=yes</code></p>
+<code>2、callback不为空时，一旦查询到结果就返回给回调URL，调用方式为GET https://YOUR_CALLBACKURL/?number=%2B62813116594289&amp;whatsapp=no&amp;status_update=20180825&amp;signature=Saya+suka+Indonesia&amp;business_user=no&amp;avatar=yes</code></p>
 <h3 id='9ea07c6cb3-15'>状态码说明</h3>
 <table><thead>
 <tr>
