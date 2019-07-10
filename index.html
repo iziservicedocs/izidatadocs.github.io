@@ -555,7 +555,7 @@
               </ul>
           </li>
           <li>
-            <a href="#f65dc312d4" class="toc-h1 toc-link" data-title="多头查询">多头查询</a>
+            <a href="#544c5a824e" class="toc-h1 toc-link" data-title="手机号多头查询">手机号多头查询</a>
               <ul class="toc-list-h2">
                   <li>
                     <a href="#http-17" class="toc-h2 toc-link" data-title="HTTP请求">HTTP请求</a>
@@ -572,25 +572,36 @@
               </ul>
           </li>
           <li>
-            <a href="#fd0236694b" class="toc-h1 toc-link" data-title="多头查询（详版）">多头查询（详版）</a>
+            <a href="#37ec6aec73" class="toc-h1 toc-link" data-title="身份证多头查询（详版）">身份证多头查询（详版）</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#http-18" class="toc-h2 toc-link" data-title="HTTP请求（根据身份证获取）">HTTP请求（根据身份证获取）</a>
+                    <a href="#http-18" class="toc-h2 toc-link" data-title="HTTP请求">HTTP请求</a>
                   </li>
                   <li>
                     <a href="#1f9ac54b15-19" class="toc-h2 toc-link" data-title="请求参数">请求参数</a>
-                  </li>
-                  <li>
-                    <a href="#http-19" class="toc-h2 toc-link" data-title="HTTP请求（根据号码获取）">HTTP请求（根据号码获取）</a>
-                  </li>
-                  <li>
-                    <a href="#1f9ac54b15-20" class="toc-h2 toc-link" data-title="请求参数">请求参数</a>
                   </li>
                   <li>
                     <a href="#afeebde3f7-18" class="toc-h2 toc-link" data-title="返回数据格式">返回数据格式</a>
                   </li>
                   <li>
                     <a href="#9ea07c6cb3-20" class="toc-h2 toc-link" data-title="状态码说明">状态码说明</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#f2add5e11f" class="toc-h1 toc-link" data-title="手机号多头查询（详版）">手机号多头查询（详版）</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#http-19" class="toc-h2 toc-link" data-title="HTTP请求">HTTP请求</a>
+                  </li>
+                  <li>
+                    <a href="#1f9ac54b15-20" class="toc-h2 toc-link" data-title="请求参数">请求参数</a>
+                  </li>
+                  <li>
+                    <a href="#afeebde3f7-19" class="toc-h2 toc-link" data-title="返回数据格式">返回数据格式</a>
+                  </li>
+                  <li>
+                    <a href="#9ea07c6cb3-21" class="toc-h2 toc-link" data-title="状态码说明">状态码说明</a>
                   </li>
               </ul>
           </li>
@@ -604,10 +615,10 @@
                     <a href="#1f9ac54b15-21" class="toc-h2 toc-link" data-title="请求参数">请求参数</a>
                   </li>
                   <li>
-                    <a href="#afeebde3f7-19" class="toc-h2 toc-link" data-title="返回数据格式">返回数据格式</a>
+                    <a href="#afeebde3f7-20" class="toc-h2 toc-link" data-title="返回数据格式">返回数据格式</a>
                   </li>
                   <li>
-                    <a href="#9ea07c6cb3-21" class="toc-h2 toc-link" data-title="状态码说明">状态码说明</a>
+                    <a href="#9ea07c6cb3-22" class="toc-h2 toc-link" data-title="状态码说明">状态码说明</a>
                   </li>
               </ul>
           </li>
@@ -4151,7 +4162,7 @@
 <td><code>免费</code>，系统错误，请稍后重试</td>
 </tr>
 </tbody></table>
-<h1 id='f65dc312d4'>多头查询</h1>
+<h1 id='544c5a824e'>手机号多头查询</h1>
 <p>电话号码，提供查询贷款机构的数量。</p>
 
 <blockquote>
@@ -4163,7 +4174,7 @@
 <span class="n">api</span> <span class="o">=</span> <span class="n">izi</span><span class="o">.</span><span class="n">client</span><span class="p">(</span><span class="s">'YOUR_ACCESS_KEY'</span><span class="p">,</span> <span class="s">'YOUR_SECRET_KEY'</span><span class="p">)</span>
 <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s">"phone"</span><span class="p">:</span> <span class="s">"+62895806600002"</span><span class="p">}</span>
 <span class="c">#phone为32位md5加密</span>
-<span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s">"phone"</span><span class="p">:</span> <span class="s">"926799cb75a5d93c1c0fca56ba2b265d"</span><span class="p">,</span> <span class="s">"md5"</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
+<span class="c">#data = {"phone": "926799cb75a5d93c1c0fca56ba2b265d", "md5": 1}</span>
 <span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.izi.credit/v1/phoneinquiries"</span>
 <span class="n">response</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
@@ -4324,82 +4335,39 @@
 <td><code>免费</code>，系统错误，请稍后重试</td>
 </tr>
 </tbody></table>
-<h1 id='fd0236694b'>多头查询（详版）</h1>
-<p>根据身份证、电话号码，提供90天内每一天贷款机构查询的量，以及历史上所有贷款机构查询的量。</p>
+<h1 id='37ec6aec73'>身份证多头查询（详版）</h1>
+<p>根据身份证，提供90天内每一天贷款机构查询的量，以及历史上所有贷款机构查询的量。</p>
 
 <blockquote>
 <p>代码示例：</p>
 </blockquote>
 <pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">izi</span>
 
-<span class="c">#ktp inquiries</span>
 <span class="n">api</span> <span class="o">=</span> <span class="n">izi</span><span class="o">.</span><span class="n">client</span><span class="p">(</span><span class="s">'YOUR_ACCESS_KEY'</span><span class="p">,</span> <span class="s">'YOUR_SECRET_KEY'</span><span class="p">)</span>
 <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s">"id"</span><span class="p">:</span> <span class="s">"3171024302821001"</span><span class="p">}</span>
+<span class="c">#ktp为32位md5加密</span>
+<span class="c">#data = {"id": "f207821365c0485257481e9eb0020ae7", "md5": 1}</span>
 <span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.izi.credit/v2/idinquiries"</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
-
-<span class="c">#phone inquiries</span>
-<span class="n">api</span> <span class="o">=</span> <span class="n">izi</span><span class="o">.</span><span class="n">client</span><span class="p">(</span><span class="s">'YOUR_ACCESS_KEY'</span><span class="p">,</span> <span class="s">'YOUR_SECRET_KEY'</span><span class="p">)</span>
-<span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s">"phone"</span><span class="p">:</span> <span class="s">"+62895806600002"</span><span class="p">}</span>
-<span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.izi.credit/v2/phoneinquiries"</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
-
-<span class="kn">import</span> <span class="nn">izi</span>
-
-<span class="c">#ktp inquiries (32位md5加密)</span>
-<span class="n">api</span> <span class="o">=</span> <span class="n">izi</span><span class="o">.</span><span class="n">client</span><span class="p">(</span><span class="s">'YOUR_ACCESS_KEY'</span><span class="p">,</span> <span class="s">'YOUR_SECRET_KEY'</span><span class="p">)</span>
-<span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s">"id"</span><span class="p">:</span> <span class="s">"f207821365c0485257481e9eb0020ae7"</span><span class="p">,</span> <span class="s">"md5"</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
-<span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.izi.credit/v2/idinquiries"</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
-
-<span class="c">#phone inquiries (32位md5加密)</span>
-<span class="n">api</span> <span class="o">=</span> <span class="n">izi</span><span class="o">.</span><span class="n">client</span><span class="p">(</span><span class="s">'YOUR_ACCESS_KEY'</span><span class="p">,</span> <span class="s">'YOUR_SECRET_KEY'</span><span class="p">)</span>
-<span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s">"phone"</span><span class="p">:</span> <span class="s">"926799cb75a5d93c1c0fca56ba2b265d"</span><span class="p">,</span> <span class="s">"md5"</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
-<span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.izi.credit/v2/phoneinquiries"</span>
 <span class="n">response</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
 </code></pre><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
 <span class="k">require_once</span> <span class="s2">"izi/IziClient.php"</span><span class="p">;</span>
 
-<span class="c1">//ktp inquiries
-</span><span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">IziClient</span><span class="p">(</span><span class="s2">"YOUR_ACCESS_KEY"</span><span class="p">,</span> <span class="s2">"YOUR_SECRET_KEY"</span><span class="p">);</span>
+<span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">IziClient</span><span class="p">(</span><span class="s2">"YOUR_ACCESS_KEY"</span><span class="p">,</span> <span class="s2">"YOUR_SECRET_KEY"</span><span class="p">);</span>
 <span class="nv">$url</span> <span class="o">=</span> <span class="s2">"https://api.izi.credit/v2/idinquiries"</span><span class="p">;</span>
 <span class="nv">$data</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s2">"id"</span><span class="o">=&gt;</span><span class="s2">"3171024302821001"</span><span class="p">);</span>
-<span class="nv">$response</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="na">request</span><span class="p">(</span><span class="nv">$url</span><span class="p">,</span> <span class="nv">$data</span><span class="p">);</span>
-<span class="k">print</span><span class="p">(</span><span class="nv">$response</span><span class="p">);</span>
-
-<span class="c1">//phone inquiries
-</span><span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">IziClient</span><span class="p">(</span><span class="s2">"YOUR_ACCESS_KEY"</span><span class="p">,</span> <span class="s2">"YOUR_SECRET_KEY"</span><span class="p">);</span>
-<span class="nv">$url</span> <span class="o">=</span> <span class="s2">"https://api.izi.credit/v2/phoneinquiries"</span><span class="p">;</span>
-<span class="nv">$data</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s2">"phone"</span><span class="o">=&gt;</span><span class="s2">"+62895806600002"</span><span class="p">);</span>
 <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="na">request</span><span class="p">(</span><span class="nv">$url</span><span class="p">,</span> <span class="nv">$data</span><span class="p">);</span>
 <span class="k">print</span><span class="p">(</span><span class="nv">$response</span><span class="p">);</span>
 </code></pre><pre class="highlight java tab-java"><code><span class="kn">import</span> <span class="nn">java.util.HashMap</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">java.util.Map</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">credit.izi.Client</span><span class="o">;</span>
 
-<span class="c1">//ktp inquiries</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainClass</span> <span class="o">{</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
         <span class="n">Client</span> <span class="n">api</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Client</span><span class="o">(</span><span class="s">"YOUR_ACCESS_KEY"</span><span class="o">,</span> <span class="s">"YOUR_SECRET_KEY"</span><span class="o">);</span>
         <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">data</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;&gt;();</span>
         <span class="n">data</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"id"</span><span class="o">,</span> <span class="s">"3171024302821001"</span><span class="o">);</span>
         <span class="n">String</span> <span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.izi.credit/v2/idinquiries"</span><span class="o">;</span>
-        <span class="n">String</span> <span class="n">response</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="na">Request</span><span class="o">(</span><span class="n">url</span><span class="o">,</span> <span class="n">data</span><span class="o">);</span>
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">response</span><span class="o">);</span>
-    <span class="o">}</span>
-<span class="o">}</span>
-
-<span class="c1">//phone inquiries</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainClass</span> <span class="o">{</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
-        <span class="n">Client</span> <span class="n">api</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Client</span><span class="o">(</span><span class="s">"YOUR_ACCESS_KEY"</span><span class="o">,</span> <span class="s">"YOUR_SECRET_KEY"</span><span class="o">);</span>
-        <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">data</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;&gt;();</span>
-        <span class="n">data</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"phone"</span><span class="o">,</span> <span class="s">"+62895806600002"</span><span class="o">);</span>
-        <span class="n">String</span> <span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.izi.credit/v2/phoneinquiries"</span><span class="o">;</span>
         <span class="n">String</span> <span class="n">response</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="na">Request</span><span class="o">(</span><span class="n">url</span><span class="o">,</span> <span class="n">data</span><span class="o">);</span>
         <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">response</span><span class="o">);</span>
     <span class="o">}</span>
@@ -4411,24 +4379,12 @@
     </span><span class="s">"github.com/izisdk/gosdk"</span><span class="x">
 </span><span class="p">)</span><span class="x">
 
-</span><span class="c">//ktp inquiries</span><span class="x">
 </span><span class="k">func</span><span class="x"> </span><span class="n">main</span><span class="p">()</span><span class="x"> </span><span class="p">{</span><span class="x">
     </span><span class="n">api</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">gosdk</span><span class="o">.</span><span class="n">NewClient</span><span class="p">(</span><span class="s">"YOUR_ACCESS_KEY"</span><span class="p">,</span><span class="x"> </span><span class="s">"YOUR_SECRET_KEY"</span><span class="p">)</span><span class="x">
     </span><span class="n">data</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="k">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">string</span><span class="p">{</span><span class="x">
         </span><span class="s">"id"</span><span class="o">:</span><span class="x"> </span><span class="s">"3171024302821001"</span><span class="p">,</span><span class="x">
     </span><span class="p">}</span><span class="x">
     </span><span class="n">url</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="s">"https://api.izi.credit/v2/idinquiries"</span><span class="x">
-    </span><span class="n">response</span><span class="p">,</span><span class="x"> </span><span class="n">_</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">api</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="n">url</span><span class="p">,</span><span class="x"> </span><span class="n">data</span><span class="p">)</span><span class="x">
-    </span><span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">response</span><span class="p">)</span><span class="x">
-</span><span class="p">}</span><span class="x">
-
-</span><span class="c">//phone inquiries</span><span class="x">
-</span><span class="k">func</span><span class="x"> </span><span class="n">main</span><span class="p">()</span><span class="x"> </span><span class="p">{</span><span class="x">
-    </span><span class="n">api</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">gosdk</span><span class="o">.</span><span class="n">NewClient</span><span class="p">(</span><span class="s">"YOUR_ACCESS_KEY"</span><span class="p">,</span><span class="x"> </span><span class="s">"YOUR_SECRET_KEY"</span><span class="p">)</span><span class="x">
-    </span><span class="n">data</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="k">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">string</span><span class="p">{</span><span class="x">
-        </span><span class="s">"phone"</span><span class="o">:</span><span class="x"> </span><span class="s">"+62895806600002"</span><span class="p">,</span><span class="x">
-    </span><span class="p">}</span><span class="x">
-    </span><span class="n">url</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="s">"https://api.izi.credit/v2/phoneinquiries"</span><span class="x">
     </span><span class="n">response</span><span class="p">,</span><span class="x"> </span><span class="n">_</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">api</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="n">url</span><span class="p">,</span><span class="x"> </span><span class="n">data</span><span class="p">)</span><span class="x">
     </span><span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">response</span><span class="p">)</span><span class="x">
 </span><span class="p">}</span><span class="x">
@@ -4472,7 +4428,7 @@
   </span><span class="s2">"status"</span><span class="p">:</span><span class="s2">"NOT_FOUND_MD5"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"message"</span><span class="p">:</span><span class="s2">"This md5 can't be found in our system"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='http-18'>HTTP请求（根据身份证获取）</h3>
+</span></code></pre><h3 id='http-18'>HTTP请求</h3>
 <p><code>POST https://api.izi.credit/v2/idinquiries</code></p>
 <h3 id='1f9ac54b15-19'>请求参数</h3>
 <table><thead>
@@ -4488,24 +4444,6 @@
 <tr>
 <td><code>md5</code></td>
 <td><code>可选</code>，<code>字符串</code>，md5=1表示请求参数为32位md5</td>
-</tr>
-</tbody></table>
-<h3 id='http-19'>HTTP请求（根据号码获取）</h3>
-<p><code>POST https://api.izi.credit/v2/phoneinquiries</code></p>
-<h3 id='1f9ac54b15-20'>请求参数</h3>
-<table><thead>
-<tr>
-<th>参数</th>
-<th>描述</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>phone</code></td>
-<td><code>必选</code>，<code>字符串</code>，电话号码</td>
-</tr>
-<tr>
-<td><code>md5</code></td>
-<td><code>可选</code>，<code>字符串</code>，md5=1表示请求参数为32位md5，电话号码需以E164格式32位md5加密, E164请见【全球电话运营商查询】</td>
 </tr>
 </tbody></table>
 <h3 id='afeebde3f7-18'>返回数据格式</h3>
@@ -4540,12 +4478,160 @@
 <td>查询成功计费，<code>message</code>为查询结论</td>
 </tr>
 <tr>
-<td><code>INVALID_PHONE_NUMBER</code></td>
-<td><code>免费</code>，输入的电话号码不合法</td>
-</tr>
-<tr>
 <td><code>INVALID_ID_NUMBER</code></td>
 <td><code>免费</code>，输入的身份证号码不合法</td>
+</tr>
+<tr>
+<td><code>RETRY_LATER</code></td>
+<td><code>免费</code>，系统错误，请稍后重试</td>
+</tr>
+</tbody></table>
+<h1 id='f2add5e11f'>手机号多头查询（详版）</h1>
+<p>根据手机号，提供90天内每一天贷款机构查询的量，以及历史上所有贷款机构查询的量。</p>
+
+<blockquote>
+<p>代码示例：</p>
+</blockquote>
+<pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">izi</span>
+
+<span class="kn">import</span> <span class="nn">izi</span>
+<span class="n">api</span> <span class="o">=</span> <span class="n">izi</span><span class="o">.</span><span class="n">client</span><span class="p">(</span><span class="s">'YOUR_ACCESS_KEY'</span><span class="p">,</span> <span class="s">'YOUR_SECRET_KEY'</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s">"phone"</span><span class="p">:</span> <span class="s">"+62895806600002"</span><span class="p">}</span>
+<span class="c">#phone为32位md5加密</span>
+<span class="c">#data = {"phone": "926799cb75a5d93c1c0fca56ba2b265d", "md5": 1}</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.izi.credit/v2/phoneinquiries"</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</code></pre><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+<span class="k">require_once</span> <span class="s2">"izi/IziClient.php"</span><span class="p">;</span>
+
+<span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">IziClient</span><span class="p">(</span><span class="s2">"YOUR_ACCESS_KEY"</span><span class="p">,</span> <span class="s2">"YOUR_SECRET_KEY"</span><span class="p">);</span>
+<span class="nv">$url</span> <span class="o">=</span> <span class="s2">"https://api.izi.credit/v2/phoneinquiries"</span><span class="p">;</span>
+<span class="nv">$data</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s2">"phone"</span><span class="o">=&gt;</span><span class="s2">"+62895806600002"</span><span class="p">);</span>
+<span class="nv">$response</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="na">request</span><span class="p">(</span><span class="nv">$url</span><span class="p">,</span> <span class="nv">$data</span><span class="p">);</span>
+<span class="k">print</span><span class="p">(</span><span class="nv">$response</span><span class="p">);</span>
+</code></pre><pre class="highlight java tab-java"><code><span class="kn">import</span> <span class="nn">java.util.HashMap</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Map</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">credit.izi.Client</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainClass</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">Client</span> <span class="n">api</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Client</span><span class="o">(</span><span class="s">"YOUR_ACCESS_KEY"</span><span class="o">,</span> <span class="s">"YOUR_SECRET_KEY"</span><span class="o">);</span>
+        <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">data</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;&gt;();</span>
+        <span class="n">data</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"phone"</span><span class="o">,</span> <span class="s">"+62895806600002"</span><span class="o">);</span>
+        <span class="n">String</span> <span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.izi.credit/v2/phoneinquiries"</span><span class="o">;</span>
+        <span class="n">String</span> <span class="n">response</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="na">Request</span><span class="o">(</span><span class="n">url</span><span class="o">,</span> <span class="n">data</span><span class="o">);</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">response</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre><pre class="highlight go tab-go"><code><span class="k">package</span><span class="x"> </span><span class="n">main</span><span class="x">
+
+</span><span class="k">import</span><span class="x"> </span><span class="p">(</span><span class="x">
+    </span><span class="s">"fmt"</span><span class="x">
+    </span><span class="s">"github.com/izisdk/gosdk"</span><span class="x">
+</span><span class="p">)</span><span class="x">
+
+</span><span class="k">func</span><span class="x"> </span><span class="n">main</span><span class="p">()</span><span class="x"> </span><span class="p">{</span><span class="x">
+    </span><span class="n">api</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">gosdk</span><span class="o">.</span><span class="n">NewClient</span><span class="p">(</span><span class="s">"YOUR_ACCESS_KEY"</span><span class="p">,</span><span class="x"> </span><span class="s">"YOUR_SECRET_KEY"</span><span class="p">)</span><span class="x">
+    </span><span class="n">data</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="k">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">string</span><span class="p">{</span><span class="x">
+        </span><span class="s">"phone"</span><span class="o">:</span><span class="x"> </span><span class="s">"+62895806600002"</span><span class="p">,</span><span class="x">
+    </span><span class="p">}</span><span class="x">
+    </span><span class="n">url</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="s">"https://api.izi.credit/v2/phoneinquiries"</span><span class="x">
+    </span><span class="n">response</span><span class="p">,</span><span class="x"> </span><span class="n">_</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">api</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="n">url</span><span class="p">,</span><span class="x"> </span><span class="n">data</span><span class="p">)</span><span class="x">
+    </span><span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">response</span><span class="p">)</span><span class="x">
+</span><span class="p">}</span><span class="x">
+</span></code></pre>
+<blockquote>
+<p>能查到结果的应答样例</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OK"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"20190101"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"20190205"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"20190311"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"20190511"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"20190601"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"20190621"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">11</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>请求参数错误</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FAIL"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Invalid phone number, please check your phone number format"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>服务器内部错误</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"RETRY_LATER"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Service is not available right now, please try again later"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>请求的md5在系统中不存在</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="s2">"NOT_FOUND_MD5"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="s2">"This md5 can't be found in our system"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-19'>HTTP请求</h3>
+<p><code>POST https://api.izi.credit/v2/phoneinquiries</code></p>
+<h3 id='1f9ac54b15-20'>请求参数</h3>
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>phone</code></td>
+<td><code>必选</code>，<code>字符串</code>，电话号码</td>
+</tr>
+<tr>
+<td><code>md5</code></td>
+<td><code>可选</code>，<code>字符串</code>，md5=1表示请求参数为32位md5，电话号码需以E164格式32位md5加密, E164请见【全球电话运营商查询】</td>
+</tr>
+</tbody></table>
+<h3 id='afeebde3f7-19'>返回数据格式</h3>
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>status</code></td>
+<td>状态码</td>
+</tr>
+<tr>
+<td><code>message</code></td>
+<td><code>date(例如:20190620)</code>：有机构查询的日期，并且被机构查询的量(每个机构一天查询多次查询的量算一次)</td>
+</tr>
+<tr>
+<td></td>
+<td><code>total</code>：查询贷款机构的总数量</td>
+</tr>
+</tbody></table>
+<h3 id='9ea07c6cb3-21'>状态码说明</h3>
+<table><thead>
+<tr>
+<th>status</th>
+<th>说明</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>OK</code></td>
+<td>查询成功计费，<code>message</code>为查询结论</td>
+</tr>
+<tr>
+<td><code>FAIL</code></td>
+<td><code>免费</code>，输入的电话号码不合法</td>
 </tr>
 <tr>
 <td><code>RETRY_LATER</code></td>
@@ -4666,7 +4752,7 @@
 <td><code>可选</code>，<code>字符串</code>，md5=1表示请求参数为32位md5，电话号码需以E164格式32位md5加密, E164请见【全球电话运营商查询】</td>
 </tr>
 </tbody></table>
-<h3 id='afeebde3f7-19'>返回数据格式</h3>
+<h3 id='afeebde3f7-20'>返回数据格式</h3>
 <table><thead>
 <tr>
 <th>参数</th>
@@ -4682,7 +4768,7 @@
 <td>查询结论</td>
 </tr>
 </tbody></table>
-<h3 id='9ea07c6cb3-21'>状态码说明</h3>
+<h3 id='9ea07c6cb3-22'>状态码说明</h3>
 <table><thead>
 <tr>
 <th>status</th>
