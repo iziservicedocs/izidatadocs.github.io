@@ -6350,11 +6350,11 @@ Please make sure to replace <code>YOUR_ACCESS_KEY</code> and <code>YOUR_SECRET_K
 </thead><tbody>
 <tr>
 <td><code>phone</code></td>
-<td><code>optional</code>, <code>string</code>, phone number</td>
+<td><code>string</code>, phone number</td>
 </tr>
 <tr>
 <td><code>id</code></td>
-<td><code>optional</code>, <code>string</code>，ktp</td>
+<td><code>string</code>，ktp</td>
 </tr>
 <tr>
 <td><code>md5</code></td>
@@ -6406,7 +6406,7 @@ Please make sure to replace <code>YOUR_ACCESS_KEY</code> and <code>YOUR_SECRET_K
 </tr>
 </tbody></table>
 <h1 id='credit-feature'>Credit feature</h1>
-<p>According to the phone number、 ktp、 name, return custom features that customers need, including credit score, fraud status, multiple status and features that other interfaces can output.</p>
+<p>According to the phone number、 ktp、 name, return custom features that customers need, including credit score, inquiries feature and features that other interfaces can output.</p>
 
 <blockquote>
 <p>Code example:</p>
@@ -6490,8 +6490,6 @@ Please make sure to replace <code>YOUR_ACCESS_KEY</code> and <code>YOUR_SECRET_K
   </span><span class="s2">"message"</span><span class="p">:{</span><span class="w">
     </span><span class="s2">"creditscore"</span><span class="p">:</span><span class="w"> </span><span class="mi">654</span><span class="p">,</span><span class="w">
     </span><span class="s2">"featurelist"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"blacklist"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"fraud"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
       </span><span class="s2">"phoneage"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
       </span><span class="s2">"iswhatsapp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
       </span><span class="s2">"topup_90"</span><span class="p">:</span><span class="w"> </span><span class="mi">1000</span><span class="w">
