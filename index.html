@@ -6433,11 +6433,11 @@
 </thead><tbody>
 <tr>
 <td><code>phone</code></td>
-<td><code>可选</code>，<code>字符串</code>，电话号码</td>
+<td><code>必选</code>，<code>字符串</code>，电话号码</td>
 </tr>
 <tr>
 <td><code>id</code></td>
-<td><code>可选</code>，<code>字符串</code>，身份证号</td>
+<td><code>必选</code>，<code>字符串</code>，身份证号</td>
 </tr>
 <tr>
 <td><code>md5</code></td>
@@ -6489,7 +6489,7 @@
 </tr>
 </tbody></table>
 <h1 id='0354b916b6'>定制特征</h1>
-<p>根据电话号码、身份证、姓名返回客户需要的定制特征，包含信用分、欺诈分、多头分以及其他接口所能输出的特征</p>
+<p>根据电话号码、身份证、姓名返回客户需要的定制特征，包含信用分、多头特征、充值特征以及其他接口所能输出的特征</p>
 
 <blockquote>
 <p>代码示例：</p>
@@ -6573,8 +6573,6 @@
   </span><span class="s2">"message"</span><span class="p">:{</span><span class="w">
     </span><span class="s2">"creditscore"</span><span class="p">:</span><span class="w"> </span><span class="mi">654</span><span class="p">,</span><span class="w">
     </span><span class="s2">"featurelist"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"blacklist"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"fraud"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
       </span><span class="s2">"phoneage"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
       </span><span class="s2">"iswhatsapp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
       </span><span class="s2">"topup_90"</span><span class="p">:</span><span class="w"> </span><span class="mi">1000</span><span class="w">
