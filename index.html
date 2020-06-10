@@ -498,7 +498,7 @@
                     <a href="#afeebde3f7-14" class="toc-h2 toc-link" data-title="返回数据格式">返回数据格式</a>
                   </li>
                   <li>
-                    <a href="#af989d8988" class="toc-h2 toc-link" data-title="请求方式">请求方式</a>
+                    <a href="#4e627bd8b2" class="toc-h2 toc-link" data-title="回调方式">回调方式</a>
                   </li>
                   <li>
                     <a href="#9ea07c6cb3-16" class="toc-h2 toc-link" data-title="状态码说明">状态码说明</a>
@@ -518,7 +518,7 @@
                     <a href="#afeebde3f7-15" class="toc-h2 toc-link" data-title="返回数据格式">返回数据格式</a>
                   </li>
                   <li>
-                    <a href="#af989d8988-2" class="toc-h2 toc-link" data-title="请求方式">请求方式</a>
+                    <a href="#4e627bd8b2-2" class="toc-h2 toc-link" data-title="回调方式">回调方式</a>
                   </li>
                   <li>
                     <a href="#9ea07c6cb3-17" class="toc-h2 toc-link" data-title="状态码说明">状态码说明</a>
@@ -538,7 +538,7 @@
                     <a href="#afeebde3f7-16" class="toc-h2 toc-link" data-title="返回数据格式">返回数据格式</a>
                   </li>
                   <li>
-                    <a href="#af989d8988-3" class="toc-h2 toc-link" data-title="请求方式">请求方式</a>
+                    <a href="#4e627bd8b2-3" class="toc-h2 toc-link" data-title="回调方式">回调方式</a>
                   </li>
                   <li>
                     <a href="#9ea07c6cb3-18" class="toc-h2 toc-link" data-title="状态码说明">状态码说明</a>
@@ -558,7 +558,7 @@
                     <a href="#afeebde3f7-17" class="toc-h2 toc-link" data-title="返回数据格式">返回数据格式</a>
                   </li>
                   <li>
-                    <a href="#af989d8988-4" class="toc-h2 toc-link" data-title="请求方式">请求方式</a>
+                    <a href="#4e627bd8b2-4" class="toc-h2 toc-link" data-title="回调方式">回调方式</a>
                   </li>
                   <li>
                     <a href="#9ea07c6cb3-19" class="toc-h2 toc-link" data-title="状态码说明">状态码说明</a>
@@ -578,7 +578,7 @@
                     <a href="#afeebde3f7-18" class="toc-h2 toc-link" data-title="返回数据格式">返回数据格式</a>
                   </li>
                   <li>
-                    <a href="#af989d8988-5" class="toc-h2 toc-link" data-title="请求方式">请求方式</a>
+                    <a href="#4e627bd8b2-5" class="toc-h2 toc-link" data-title="回调方式">回调方式</a>
                   </li>
                   <li>
                     <a href="#9ea07c6cb3-20" class="toc-h2 toc-link" data-title="状态码说明">状态码说明</a>
@@ -598,7 +598,7 @@
                     <a href="#afeebde3f7-19" class="toc-h2 toc-link" data-title="返回数据格式">返回数据格式</a>
                   </li>
                   <li>
-                    <a href="#af989d8988-6" class="toc-h2 toc-link" data-title="请求方式">请求方式</a>
+                    <a href="#4e627bd8b2-6" class="toc-h2 toc-link" data-title="回调方式">回调方式</a>
                   </li>
                   <li>
                     <a href="#9ea07c6cb3-21" class="toc-h2 toc-link" data-title="状态码说明">状态码说明</a>
@@ -3858,7 +3858,7 @@
 </thead><tbody>
 <tr>
 <td><code>number</code></td>
-<td><code>必选</code>，<code>字符串</code>，查询人员的电话号</td>
+<td><code>必选</code>，<code>字符串</code>，查询人员的电话号，仅限印尼号码</td>
 </tr>
 <tr>
 <td><code>md5</code></td>
@@ -3893,11 +3893,8 @@
 <td><code>whatsapp</code>：被查询号码是否开通了whatsapp</td>
 </tr>
 </tbody></table>
-<h3 id='af989d8988'>请求方式</h3>
-<ol>
-<li>callback为空时，当whatsapp值为checking，需要间隔一段时间(&gt;2min)再次发起检测请求</li>
-<li>callback不为空时，一旦查询到结果就返回给回调URL，请不要多次回调同一个号码，多次请求回调对应扣费多次，调用方式为GET https://YOUR_CALLBACKURL/?number=%2B62813116594289&amp;whatsapp=no</li>
-</ol>
+<h3 id='4e627bd8b2'>回调方式</h3>
+<p>callback不为空时，一旦查询到结果就返回给回调URL，请不要多次回调同一个号码，多次请求回调对应扣费多次，调用方式为GET https://YOUR_CALLBACKURL/?number=%2B62813116594289&amp;whatsapp=no</p>
 <h3 id='9ea07c6cb3-16'>状态码说明</h3>
 <table><thead>
 <tr>
@@ -4057,7 +4054,7 @@
 </thead><tbody>
 <tr>
 <td><code>number</code></td>
-<td><code>必选</code>，<code>字符串</code>，查询人员的电话号</td>
+<td><code>必选</code>，<code>字符串</code>，查询人员的电话号，仅限印尼号码</td>
 </tr>
 <tr>
 <td><code>md5</code></td>
@@ -4108,11 +4105,8 @@
 <td><code>avatar</code>：是否有头像</td>
 </tr>
 </tbody></table>
-<h3 id='af989d8988-2'>请求方式</h3>
-<ol>
-<li>callback为空时，当whatsapp值为checking，需要间隔一段时间(&gt;2min)再次发起检测请求</li>
-<li>callback不为空时，一旦查询到结果就返回给回调URL，请不要多次回调同一个号码，多次请求回调对应扣费多次，调用方式为GET https://YOUR_CALLBACKURL/?number=%2B62813116594289&amp;whatsapp=no&amp;status_update=20180825&amp;signature=Saya+suka+Indonesia&amp;business_user=no&amp;avatar=yes</li>
-</ol>
+<h3 id='4e627bd8b2-2'>回调方式</h3>
+<p>callback不为空时，一旦查询到结果就返回给回调URL，请不要多次回调同一个号码，多次请求回调对应扣费多次，调用方式为GET https://YOUR_CALLBACKURL/?number=%2B62813116594289&amp;whatsapp=no&amp;status_update=20180825&amp;signature=Saya+suka+Indonesia&amp;business_user=no&amp;avatar=yes</p>
 <h3 id='9ea07c6cb3-17'>状态码说明</h3>
 <table><thead>
 <tr>
@@ -4221,9 +4215,24 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <blockquote>
-<p>通过回调地址进行返回(callback地址) </p>
+<p>查询到结果，进行回调(callback地址)，情况一：</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>GET https://YOUR_CALLBACKURL/?lastseen<span class="o">=</span>1591243413&amp;number<span class="o">=</span>%2B6282299999999&amp;status<span class="o">=</span>offline&amp;whatsapp<span class="o">=</span>yes
+<pre class="highlight shell tab-shell"><code>GET https://YOUR_CALLBACKURL/?number<span class="o">=</span>%2B6282299999999&amp;whatsapp<span class="o">=</span>yes&amp;status<span class="o">=</span>online&amp;lastseen<span class="o">=</span>1591243413
+</code></pre>
+<blockquote>
+<p>查询到结果，进行回调(callback地址)，情况二：</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>GET https://YOUR_CALLBACKURL/?number<span class="o">=</span>%2B6282299999999&amp;whatsapp<span class="o">=</span>yes&amp;status<span class="o">=</span>offline&amp;lastseen<span class="o">=</span>1591243413
+</code></pre>
+<blockquote>
+<p>查询到结果，进行回调(callback地址)，情况三：</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>GET https://YOUR_CALLBACKURL/?number<span class="o">=</span>%2B6282299999999&amp;whatsapp<span class="o">=</span>no&amp;status<span class="o">=</span>&amp;lastseen<span class="o">=</span>
+</code></pre>
+<blockquote>
+<p>查询到结果，进行回调(callback地址)，情况四：</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>GET https://YOUR_CALLBACKURL/?number<span class="o">=</span>%2B6282299999999&amp;whatsapp<span class="o">=</span>deny&amp;status<span class="o">=</span>&amp;lastseen<span class="o">=</span>
 </code></pre><h3 id='http-16'>HTTP请求</h3>
 <p><code>POST https://api.izi.credit/v1/idwalastseen</code></p>
 <h3 id='1f9ac54b15-17'>请求参数</h3>
@@ -4235,7 +4244,7 @@
 </thead><tbody>
 <tr>
 <td><code>number</code></td>
-<td><code>必选</code>，<code>字符串</code>，查询人员的电话号</td>
+<td><code>必选</code>，<code>字符串</code>，查询人员的电话号，仅限印尼号码</td>
 </tr>
 <tr>
 <td><code>callback</code></td>
@@ -4274,7 +4283,7 @@
 <td><code>lastseen</code>：时间戳</td>
 </tr>
 </tbody></table>
-<h3 id='af989d8988-3'>请求方式</h3>
+<h3 id='4e627bd8b2-3'>回调方式</h3>
 <p>callback不为空时，一旦查询到结果就返回给回调URL，多次请求回调对应扣费多次，调用方式为GET GET https://YOUR_CALLBACKURL/?lastseen=1591243413&amp;number=%2B6282299999999&amp;status=offline&amp;whatsapp=yes</p>
 <h3 id='9ea07c6cb3-18'>状态码说明</h3>
 <table><thead>
@@ -4453,7 +4462,7 @@
 </thead><tbody>
 <tr>
 <td><code>number</code></td>
-<td><code>必选</code>，<code>字符串</code>，查询人员的电话号</td>
+<td><code>必选</code>，<code>字符串</code>，查询人员的电话号，仅限印尼号码</td>
 </tr>
 <tr>
 <td><code>md5</code></td>
@@ -4484,11 +4493,8 @@
 <td><code>facebook</code>：被查询号码是否开通了facebook</td>
 </tr>
 </tbody></table>
-<h3 id='af989d8988-4'>请求方式</h3>
-<ol>
-<li>callback为空时，当facebook值为checking，需要间隔一段时间(&gt;2min)再次发起检测请求</li>
-<li>callback不为空时，一旦查询到结果就返回给回调URL，请不要多次回调同一个号码，多次请求回调对应扣费多次。调用方式为GET https://YOUR_CALLBACKURL/?number=%2B62813116594289&amp;facebook=ONE_ACCOUNT</li>
-</ol>
+<h3 id='4e627bd8b2-4'>回调方式</h3>
+<p>callback不为空时，一旦查询到结果就返回给回调URL，请不要多次回调同一个号码，多次请求回调对应扣费多次。调用方式为GET https://YOUR_CALLBACKURL/?number=%2B62813116594289&amp;facebook=ONE_ACCOUNT</p>
 <h3 id='9ea07c6cb3-19'>状态码说明</h3>
 <table><thead>
 <tr>
@@ -4646,15 +4652,11 @@
 </thead><tbody>
 <tr>
 <td><code>number</code></td>
-<td><code>必选</code>，<code>字符串</code>，查询人员的电话号</td>
+<td><code>必选</code>，<code>字符串</code>，查询人员的电话号，仅限印尼号码</td>
 </tr>
 <tr>
 <td><code>md5</code></td>
 <td><code>可选</code>，<code>字符串</code>，md5目前只支持印尼地区，md5=1表示请求参数为32位md5，电话号码需以E164格式32位md5加密, E164请见 <a href="https://docs.izi.credit/#6a00ac33b2" title="查看">全球电话运营商查询</a></td>
-</tr>
-<tr>
-<td><code>realtime</code></td>
-<td><code>可选</code>，<code>数值型</code>，值为1时发起实时请求，如20s内获取不到结果，则返回checking</td>
 </tr>
 <tr>
 <td><code>callback</code></td>
@@ -4689,11 +4691,8 @@
 <td><code>avatar</code>：是否有头像</td>
 </tr>
 </tbody></table>
-<h3 id='af989d8988-5'>请求方式</h3>
-<ol>
-<li>callback为空时，当telegram值为checking，需要间隔一段时间(&gt;2min)再次发起检测请求</li>
-<li>callback不为空时，一旦查询到结果就返回给回调URL，请不要多次回调同一个号码，多次请求回调对应扣费多次，调用方式为GET https://YOUR_CALLBACKURL/?number=%2B62813116594289&amp;telegram=no&amp;avatar=yes</li>
-</ol>
+<h3 id='4e627bd8b2-5'>回调方式</h3>
+<p>callback不为空时，一旦查询到结果就返回给回调URL，请不要多次回调同一个号码，多次请求回调对应扣费多次，调用方式为GET https://YOUR_CALLBACKURL/?number=%2B62813116594289&amp;telegram=no&amp;avatar=yes</p>
 <h3 id='9ea07c6cb3-20'>状态码说明</h3>
 <table><thead>
 <tr>
@@ -4802,9 +4801,24 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <blockquote>
-<p>通过回调地址进行返回(callback地址) </p>
+<p>查询到结果，进行回调(callback地址)，情况一：</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>GET https://YOUR_CALLBACKURL/?lastseen<span class="o">=</span>1591243413&amp;number<span class="o">=</span>%2B6282299999999&amp;status<span class="o">=</span>offline&amp;telegram<span class="o">=</span>yes
+<pre class="highlight shell tab-shell"><code>GET https://YOUR_CALLBACKURL/?number<span class="o">=</span>%2B6282299999999&amp;telegram<span class="o">=</span>yes&amp;status<span class="o">=</span>online&amp;lastseen<span class="o">=</span>1591243413
+</code></pre>
+<blockquote>
+<p>查询到结果，进行回调(callback地址)，情况二： </p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>GET https://YOUR_CALLBACKURL/?number<span class="o">=</span>%2B6282299999999&amp;telegram<span class="o">=</span>yes&amp;status<span class="o">=</span>offline&amp;lastseen<span class="o">=</span>1591243413
+</code></pre>
+<blockquote>
+<p>查询到结果，进行回调(callback地址)，情况三： </p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>GET https://YOUR_CALLBACKURL/?number<span class="o">=</span>%2B6282299999999&amp;telegram<span class="o">=</span>yes&amp;status<span class="o">=</span>offline&amp;lastseen<span class="o">=</span>recently
+</code></pre>
+<blockquote>
+<p>查询到结果，进行回调(callback地址)，情况四： </p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>GET https://YOUR_CALLBACKURL/?number<span class="o">=</span>%2B6282299999999&amp;telegram<span class="o">=</span>no&amp;status<span class="o">=</span>&amp;lastseen<span class="o">=</span>
 </code></pre><h3 id='http-19'>HTTP请求</h3>
 <p><code>POST https://api.izi.credit/v1/idtglastseen</code></p>
 <h3 id='1f9ac54b15-20'>请求参数</h3>
@@ -4816,7 +4830,7 @@
 </thead><tbody>
 <tr>
 <td><code>number</code></td>
-<td><code>必选</code>，<code>字符串</code>，查询人员的电话号</td>
+<td><code>必选</code>，<code>字符串</code>，查询人员的电话号，仅限印尼号码</td>
 </tr>
 <tr>
 <td><code>callback</code></td>
@@ -4855,7 +4869,7 @@
 <td><code>lastseen</code>：时间戳或recently</td>
 </tr>
 </tbody></table>
-<h3 id='af989d8988-6'>请求方式</h3>
+<h3 id='4e627bd8b2-6'>回调方式</h3>
 <p>callback不为空时，一旦查询到结果就返回给回调URL，多次请求回调对应扣费多次，调用方式为GET GET https://YOUR_CALLBACKURL/?lastseen=1591243413&amp;number=%2B6282299999999&amp;status=offline&amp;telegram=yes</p>
 <h3 id='9ea07c6cb3-21'>状态码说明</h3>
 <table><thead>
