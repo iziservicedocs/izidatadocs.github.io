@@ -7264,7 +7264,7 @@
 </tr>
 </tbody></table>
 <h1 id='0354b916b6'>定制特征</h1>
-<p>根据电话号码、身份证、姓名返回客户需要的定制特征，包含信用分、多头特征、充值特征以及其他接口所能输出的特征</p>
+<p>根据电话号码、身份证、姓名返回客户需要的定制特征，包含信用分、多头特征、充值特征以及其他接口所能输出的两百多个特征</p>
 
 <blockquote>
 <p>代码示例：</p>
@@ -7590,12 +7590,8 @@
 <td><code>必选</code>，<code>字符串</code>，姓名</td>
 </tr>
 <tr>
-<td><code>fbcallback</code></td>
-<td><code>可选</code>，<code>字符串</code>, facebook 检测回调地址，当facebook返回为checking时，可通过回调地址来接收结果，回调结果形式参照facebook检测文档。</td>
-</tr>
-<tr>
-<td><code>wacallback</code></td>
-<td><code>可选</code>，<code>字符串</code>, whatsapp 详情检测回调地址，当whatsapp返回为checking时，可通过回调地址来接收结果，回调结果形式参照whatsapp详情检测文档。</td>
+<td><code>callback</code></td>
+<td><code>可选</code>，<code>字符串</code>, 回调地址，由于whatsapp、facebook检测结果不能实时返回，建议通过回调返回。一旦全部查询到结果，将全部返给回调地址</td>
 </tr>
 <tr>
 <td><code>md5</code></td>
