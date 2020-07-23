@@ -7513,12 +7513,8 @@ Please make sure to replace <code>YOUR_ACCESS_KEY</code> and <code>YOUR_SECRET_K
 <td><code>string</code>，username</td>
 </tr>
 <tr>
-<td><code>fbcallback</code></td>
-<td><code>optional</code>, <code>string</code>, facebook detection callback url. When facebook returns checking, the result can be received through the callback address, the callback result form refers to the facebook detection document.</td>
-</tr>
-<tr>
-<td><code>wacallback</code></td>
-<td><code>optional</code>, <code>string</code>, whatsapp detail detection callback url. When whatsapp returns checking, the result can be received through the callback address, the callback result form refers to the whatsapp detail detection document.</td>
+<td><code>callback</code></td>
+<td><code>optional</code>, <code>string</code>, callback url, whatsapp detail detection callback url. Since the detection results of whatsapp and facebook cannot be returned in real time, it is recommended to return through callbacks. Once all the results are queried, all will be returned to the callback url</td>
 </tr>
 <tr>
 <td><code>md5</code></td>
