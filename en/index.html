@@ -355,8 +355,14 @@
               </ul>
           </li>
           <li>
-            <a href="#liveness-anti-remake" class="toc-h1 toc-link" data-title="liveness(Anti-remake)">liveness(Anti-remake)</a>
+            <a href="#liveness" class="toc-h1 toc-link" data-title="liveness">liveness</a>
               <ul class="toc-list-h2">
+                  <li>
+                    <a href="#live-recognition-process-mobile-phone-local-action-recognition-server-anti-remake-recognition" class="toc-h2 toc-link" data-title="Live recognition process: mobile phone local action recognition + server anti remake recognition">Live recognition process: mobile phone local action recognition + server anti remake recognition</a>
+                  </li>
+                  <li>
+                    <a href="#sdk-source-code-integration-process-live-demo-and-sdk-source-code-access-please-contact-the-business-to-obtain" class="toc-h2 toc-link" data-title="SDK source code integration process (live Demo and SDK source code access, please contact the business to obtain)">SDK source code integration process (live Demo and SDK source code access, please contact the business to obtain)</a>
+                  </li>
                   <li>
                     <a href="#http-request-8" class="toc-h2 toc-link" data-title="HTTP request">HTTP request</a>
                   </li>
@@ -2455,8 +2461,18 @@ Please make sure to replace <code>YOUR_ACCESS_KEY</code> and <code>YOUR_SECRET_K
 <td><code>free</code>, server error</td>
 </tr>
 </tbody></table>
-<h1 id='liveness-anti-remake'>liveness(Anti-remake)</h1>
-<p>Liveness recognition key frame image for anti-remake recognition</p>
+<h1 id='liveness'>liveness</h1><h3 id='live-recognition-process-mobile-phone-local-action-recognition-server-anti-remake-recognition'>Live recognition process: mobile phone local action recognition + server anti remake recognition</h3>
+<ol>
+<li>The Living SDK captures face information through the camera, and needs to do some simple living actions according to instructions, such as nodding, blinking, etc. If the action recognition is passed, you can proceed to the next step, otherwise it will not pass.</li>
+<li>After completing the above operations, the SDK will select a face image from the current stream as output, and the face image will be saved in the phone&#39;s settings directory.</li>
+<li>The face image needs to be sent to its own server to request the iziData anti remake interface for anti remake recognition, anti-copying recognition, and living body verification.</li>
+</ol>
+<h3 id='sdk-source-code-integration-process-live-demo-and-sdk-source-code-access-please-contact-the-business-to-obtain'>SDK source code integration process (live Demo and SDK source code access, please contact the business to obtain)</h3>
+<ol>
+<li>Copy the libs and assets files in the app to the corresponding main project category: com.offline.livedetection.face.FaceLiveActionManager.</li>
+<li>Living body detection function: faceTracker(), after the detection is successful, a face image will be generated and the face image will be used to request an anti remake interface for anti remake detection.</li>
+<li>In order to show intuitively in the demo, the anti-copying is carried out in the SDK, and the normal process needs to be executed on the server side.</li>
+</ol>
 
 <blockquote>
 <p>Code example:</p>
