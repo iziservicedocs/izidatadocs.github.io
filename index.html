@@ -358,13 +358,13 @@
             <a href="#d7fb767f1f" class="toc-h1 toc-link" data-title="活体识别">活体识别</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#85b23f1df3" class="toc-h2 toc-link" data-title="活体识别分为两步：手机本地动作识别 + 服务端防翻拍识别">活体识别分为两步：手机本地动作识别 + 服务端防翻拍识别</a>
+                    <a href="#5259427960" class="toc-h2 toc-link" data-title="活体识别流程">活体识别流程</a>
                   </li>
                   <li>
                     <a href="#sdk" class="toc-h2 toc-link" data-title="SDK源码合入流程">SDK源码合入流程</a>
                   </li>
                   <li>
-                    <a href="#http-8" class="toc-h2 toc-link" data-title="HTTP请求">HTTP请求</a>
+                    <a href="#http-8" class="toc-h2 toc-link" data-title="防翻拍HTTP请求">防翻拍HTTP请求</a>
                   </li>
                   <li>
                     <a href="#1f9ac54b15-8" class="toc-h2 toc-link" data-title="请求参数">请求参数</a>
@@ -2473,20 +2473,16 @@
 <td><code>免费</code>，系统错误</td>
 </tr>
 </tbody></table>
-<h1 id='d7fb767f1f'>活体识别</h1><h3 id='85b23f1df3'>活体识别分为两步：手机本地动作识别 + 服务端防翻拍识别</h3>
-<ol>
-<li>活体SDK通过摄像头捕获人脸信息，需要根据指令做一些简单的活体动作，比如点点头、眨眨眼等。如动作识别通过，可进行下一步操作，否则不通过。</li>
-<li>在完成上述的操作之后，SDK会从是频流中选取出一帧人脸图像作为输出，人脸图片会保存在手机的设定目录中。</li>
-<li>人脸图片需要传到自己服务器中，用来请求iziData防翻拍接口，进行防翻拍识别，防翻拍识别通过，活体验证通过。</li>
-</ol>
+<h1 id='d7fb767f1f'>活体识别</h1><h3 id='5259427960'>活体识别流程</h3>
+<p>流程分为两步：手机本地动作识别 + 服务端防翻拍识别
+1. 活体SDK通过摄像头捕获人脸信息，需要根据指令做一些简单的活体动作，比如点点头、眨眨眼等。如动作识别通过，可进行下一步操作，否则不通过。
+2. 在完成上述的操作之后，SDK会从是频流中选取出一帧人脸图像作为输出，人脸图片会保存在手机的设定目录中。
+3. 人脸图片需要传到自己服务器中，用来请求iziData防翻拍接口，进行防翻拍识别，防翻拍识别通过，活体验证通过。</p>
 <h3 id='sdk'>SDK源码合入流程</h3>
-<ol>
-<li>将app中libs和assets文件拷贝到对应的主工程下类：com.offline.livedetection.face.FaceLiveActionManager。</li>
-<li>活体检测函数：faceTracker()，检测成功后会生成人脸图像并用人脸图像请求防翻拍接口，进行防翻拍检测。</li>
-<li>演示Demo中为了直观展示，防翻拍在SDK中进行，常规流程需要放在服务端中执行。</li>
-</ol>
-
-<p>活体演示SDK请向商务获取, 进行对接后会提供SDK源码进行嵌入，防翻拍识别接口文档如下。</p>
+<p>活体Demo和接入SDK源码请联系商务获取
+1. 将app中libs和assets文件拷贝到对应的主工程下类：com.offline.livedetection.face.FaceLiveActionManager。
+2. 活体检测函数：faceTracker()，检测成功后会生成人脸图像并用人脸图像请求防翻拍接口，进行防翻拍检测。
+3. 演示Demo中为了直观展示，防翻拍在SDK中进行，常规流程需要放在服务端中执行。</p>
 
 <blockquote>
 <p>代码示例：</p>
@@ -2595,7 +2591,7 @@
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"RETRY_LATER"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Service is not available right now, please try again later"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='http-8'>HTTP请求</h3>
+</span></code></pre><h3 id='http-8'>防翻拍HTTP请求</h3>
 <p><code>POST https://api.izi.credit/v1/picturelive</code></p>
 <h3 id='1f9ac54b15-8'>请求参数</h3>
 <table><thead>
