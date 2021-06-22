@@ -355,7 +355,7 @@
               </ul>
           </li>
           <li>
-            <a href="#ad5fa0f71e" class="toc-h1 toc-link" data-title="活体识别（防翻拍）">活体识别（防翻拍）</a>
+            <a href="#d7fb767f1f" class="toc-h1 toc-link" data-title="活体识别">活体识别</a>
               <ul class="toc-list-h2">
                   <li>
                     <a href="#http-8" class="toc-h2 toc-link" data-title="HTTP请求">HTTP请求</a>
@@ -2467,8 +2467,18 @@
 <td><code>免费</code>，系统错误</td>
 </tr>
 </tbody></table>
-<h1 id='ad5fa0f71e'>活体识别（防翻拍）</h1>
-<p>活体识别关键帧图片进行防翻拍识别</p>
+<h1 id='d7fb767f1f'>活体识别</h1>
+<p>活体识别分为两步：手机本地动作识别 + 服务端防翻拍识别
+1. 活体SDK通过摄像头捕获人脸信息，需要根据指令做一些简单的活体动作，比如点点头、眨眨眼等。如动作识别通过，可进行下一步操作，否则不通过。
+2. 在完成上述的操作之后，SDK会从是频流中选取出一帧人脸图像作为输出，人脸图片会保存在手机的设定目录中。
+3. 人脸图片需要传到自己服务器中，用来请求iziData防翻拍接口，进行防翻拍识别，防翻拍识别通过，活体验证通过。</p>
+
+<p>SDK源码合入流程：
+1. 将app中libs和assets文件拷贝到对应的主工程下类：com.offline.livedetection.face.FaceLiveActionManager。
+2. 活体检测函数：faceTracker()，检测成功后会生成人脸图像并用人脸图像请求防翻拍接口，进行防翻拍检测。
+3. 演示Demo中为了直观展示，防翻拍在SDK中进行，常规流程需要放在服务端中执行。</p>
+
+<p>活体演示SDK请向商务获取, 进行对接后会提供SDK源码进行嵌入，防翻拍识别接口文档如下。</p>
 
 <blockquote>
 <p>代码示例：</p>
