@@ -975,7 +975,7 @@
               </ul>
           </li>
           <li>
-            <a href="#bpjs" class="toc-h1 toc-link" data-title="BPJS">BPJS</a>
+            <a href="#bpjs" class="toc-h1 toc-link" data-title="BPJS(医保)">BPJS(医保)</a>
               <ul class="toc-list-h2">
                   <li>
                     <a href="#http-41" class="toc-h2 toc-link" data-title="HTTP 请求">HTTP 请求</a>
@@ -992,7 +992,7 @@
               </ul>
           </li>
           <li>
-            <a href="#6822b55e93" class="toc-h1 toc-link" data-title="薪资">薪资</a>
+            <a href="#11667f45da" class="toc-h1 toc-link" data-title="月薪指数">月薪指数</a>
               <ul class="toc-list-h2">
                   <li>
                     <a href="#http-42" class="toc-h2 toc-link" data-title="HTTP 请求">HTTP 请求</a>
@@ -2638,7 +2638,7 @@
 </thead><tbody>
 <tr>
 <td><code>img</code></td>
-<td><code>字符串</code>，base64编码的身份证照片</td>
+<td><code>字符串</code>，活体视频中截取一张图片base64编码</td>
 </tr>
 </tbody></table>
 <h3 id='afeebde3f7-9'>返回数据格式</h3>
@@ -9303,8 +9303,8 @@ key=3175086400000001_%2B628581000000_AGUS+SETIANINGSIH&amp;value=%7B%22status%22
 <td><code>免费</code>，系统错误，请稍后重试</td>
 </tr>
 </tbody></table>
-<h1 id='bpjs'>BPJS</h1>
-<p>根据输入的身份证号查询该人的BPJS信息</p>
+<h1 id='bpjs'>BPJS(医保)</h1>
+<p>根据输入的身份证号查询BPJS(医保)信息</p>
 
 <blockquote>
 <p>代码示例：</p>
@@ -9363,15 +9363,27 @@ key=3175086400000001_%2B628581000000_AGUS+SETIANINGSIH&amp;value=%7B%22status%22
 <p>能查到结果的应答样例</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"status"</span><span class="p">:</span><span class="s2">"OK"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"message"</span><span class="p">:{</span><span class="w">
-        </span><span class="s2">"ktp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3171024302821001"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"isopen"</span><span class="p">:</span><span class="s2">"yes"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"class"</span><span class="p">:</span><span class="s2">"2"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"membership"</span><span class="p">:</span><span class="s2">"13"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"familymember"</span><span class="p">:</span><span class="s2">"1"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"activeStatus"</span><span class="p">:</span><span class="s2">"0"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"activeDate"</span><span class="p">:</span><span class="s2">"20140101"</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OK"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"bpjsId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0001138967897"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NATARINI NI MADE"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"gender"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"religion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"place_of_birth"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DENPASAR"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"date_of_birth"</span><span class="p">:</span><span class="w"> </span><span class="s2">"19781011"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"dependent"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"08124657979"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"ktp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5103065110780008"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"kadeknatarini@yahoo.com"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"relation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"marital_status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"nationnality"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"blood_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"office"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2201"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"membership"</span><span class="p">:</span><span class="w"> </span><span class="s2">"13"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"class"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"active_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20140101"</span><span class="w">
     </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
@@ -9425,35 +9437,83 @@ key=3175086400000001_%2B628581000000_AGUS+SETIANINGSIH&amp;value=%7B%22status%22
 </tr>
 <tr>
 <td><code>message</code></td>
-<td>查询到的BPJS信息</td>
+<td>BPJS信息</td>
 </tr>
 <tr>
 <td></td>
-<td><code>ktp</code>：查询人员的身份证号</td>
+<td><code>bpjsId</code>：医保卡号</td>
 </tr>
 <tr>
 <td></td>
-<td><code>isopen</code>：是否开通BPJS</td>
+<td><code>name</code>：姓名，<code>可能为空</code></td>
 </tr>
 <tr>
 <td></td>
-<td><code>class</code>：所属阶层</td>
+<td><code>gender</code>：性别，<code>可能为空</code></td>
 </tr>
 <tr>
 <td></td>
-<td><code>membership</code>：成员资格</td>
+<td><code>religion</code>：宗教信仰，<code>可能为空</code></td>
 </tr>
 <tr>
 <td></td>
-<td><code>familymember</code>：家庭成员数</td>
+<td><code>place_of_birth</code>：出生地，<code>可能为空</code></td>
 </tr>
 <tr>
 <td></td>
-<td><code>activeStatus</code>：激活状态</td>
+<td><code>date_of_birth</code>：出生日期，<code>可能为空</code></td>
 </tr>
 <tr>
 <td></td>
-<td><code>activeDate</code>：激活日期</td>
+<td><code>dependent</code>：医保绑定的家庭成员数，<code>可能为空</code></td>
+</tr>
+<tr>
+<td></td>
+<td><code>phone</code>：联系电话，<code>可能为空</code></td>
+</tr>
+<tr>
+<td></td>
+<td><code>ktp</code>：所属身份证，<code>可能为空</code></td>
+</tr>
+<tr>
+<td></td>
+<td><code>email</code>：联系邮箱，<code>可能为空</code></td>
+</tr>
+<tr>
+<td></td>
+<td><code>relation</code>：家庭关系，<code>可能为空</code></td>
+</tr>
+<tr>
+<td></td>
+<td><code>marital_status</code>：婚姻状况，<code>可能为空</code></td>
+</tr>
+<tr>
+<td></td>
+<td><code>nationnality</code>：国籍，<code>可能为空</code></td>
+</tr>
+<tr>
+<td></td>
+<td><code>blood_type</code>：血型，<code>可能为空</code></td>
+</tr>
+<tr>
+<td></td>
+<td><code>office</code>：缴纳公司对应的编号，<code>可能为空</code></td>
+</tr>
+<tr>
+<td></td>
+<td><code>class</code>：医保等级，<code>可能为空</code></td>
+</tr>
+<tr>
+<td></td>
+<td><code>membership</code>：工作行业，<code>可能为空</code></td>
+</tr>
+<tr>
+<td></td>
+<td><code>activeDate</code>：激活日期，<code>可能为空</code></td>
+</tr>
+<tr>
+<td></td>
+<td><code>status</code>：激活状态，<code>可能为空</code></td>
 </tr>
 </tbody></table>
 <h3 id='9ea07c6cb3-43'>状态码说明</h3>
@@ -9480,8 +9540,8 @@ key=3175086400000001_%2B628581000000_AGUS+SETIANINGSIH&amp;value=%7B%22status%22
 <td><code>免费</code>，未能查询到该用户的信息</td>
 </tr>
 </tbody></table>
-<h1 id='6822b55e93'>薪资</h1>
-<p>根据输入的身份证号查询该人最近一年的薪资</p>
+<h1 id='11667f45da'>月薪指数</h1>
+<p>根据输入的身份证查询最近平均月薪指数</p>
 
 <blockquote>
 <p>代码示例：</p>
@@ -9543,7 +9603,7 @@ key=3175086400000001_%2B628581000000_AGUS+SETIANINGSIH&amp;value=%7B%22status%22
 
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OK"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"salary"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5225167"</span><span class="w">
+      </span><span class="s2">"salary"</span><span class="p">:</span><span class="w"> </span><span class="s2">"180"</span><span class="w">
    </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
@@ -9581,7 +9641,7 @@ key=3175086400000001_%2B628581000000_AGUS+SETIANINGSIH&amp;value=%7B%22status%22
 </thead><tbody>
 <tr>
 <td><code>id</code></td>
-<td><code>必选</code>，<code>字符串</code>，查询人员的身份证号</td>
+<td><code>必选</code>，<code>字符串</code>，查询的身份证号</td>
 </tr>
 </tbody></table>
 <h3 id='afeebde3f7-42'>返回数据格式</h3>
@@ -9597,7 +9657,7 @@ key=3175086400000001_%2B628581000000_AGUS+SETIANINGSIH&amp;value=%7B%22status%22
 </tr>
 <tr>
 <td><code>message</code></td>
-<td><code>salary</code>： 该人员最新的薪资</td>
+<td><code>salary</code>： 最近平均月薪指数</td>
 </tr>
 </tbody></table>
 <h3 id='9ea07c6cb3-44'>状态码说明</h3>
