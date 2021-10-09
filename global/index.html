@@ -352,6 +352,40 @@
                   </li>
               </ul>
           </li>
+          <li>
+            <a href="#thailand-id-card-ocr" class="toc-h1 toc-link" data-title="Thailand Id Card OCR">Thailand Id Card OCR</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#http-request-7" class="toc-h2 toc-link" data-title="HTTP request">HTTP request</a>
+                  </li>
+                  <li>
+                    <a href="#request-parameters-7" class="toc-h2 toc-link" data-title="Request parameters">Request parameters</a>
+                  </li>
+                  <li>
+                    <a href="#response-format-8" class="toc-h2 toc-link" data-title="Response format">Response format</a>
+                  </li>
+                  <li>
+                    <a href="#status-code-8" class="toc-h2 toc-link" data-title="Status code">Status code</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#thailand-driver-39-s-license-ocr" class="toc-h1 toc-link" data-title="Thailand Driver's License OCR">Thailand Driver's License OCR</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#http-request-8" class="toc-h2 toc-link" data-title="HTTP request">HTTP request</a>
+                  </li>
+                  <li>
+                    <a href="#request-parameters-8" class="toc-h2 toc-link" data-title="Request parameters">Request parameters</a>
+                  </li>
+                  <li>
+                    <a href="#response-format-9" class="toc-h2 toc-link" data-title="Response format">Response format</a>
+                  </li>
+                  <li>
+                    <a href="#status-code-9" class="toc-h2 toc-link" data-title="Status code">Status code</a>
+                  </li>
+              </ul>
+          </li>
       </ul>
         <ul class="toc-footer">
             <li><a href='#'>Index</a></li>
@@ -1483,6 +1517,471 @@ Please make sure to replace <code>YOUR_ACCESS_KEY</code> and <code>YOUR_SECRET_K
 <tr>
 <td><code>RETRY_LATER</code></td>
 <td><code>free</code>, server error, please try again later</td>
+</tr>
+</tbody></table>
+<h1 id='thailand-id-card-ocr'>Thailand Id Card OCR</h1>
+<p>id number + name recognition</p>
+
+<blockquote>
+<p>Code example:</p>
+</blockquote>
+<pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">izi</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="n">izi</span><span class="o">.</span><span class="n">client</span><span class="p">(</span><span class="s">'YOUR_ACCESS_KEY'</span><span class="p">,</span> <span class="s">'YOUR_SECRET_KEY'</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s">"img"</span><span class="p">:</span> <span class="s">"BASE64_ENCODE_VALUE"</span><span class="p">}</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.izi.credit/v1/th_ocr/general"</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</code></pre><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+<span class="k">require_once</span> <span class="s2">"izi/IziClient.php"</span><span class="p">;</span>
+
+<span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">IziClient</span><span class="p">(</span><span class="s2">"YOUR_ACCESS_KEY"</span><span class="p">,</span> <span class="s2">"YOUR_SECRET_KEY"</span><span class="p">);</span>
+<span class="nv">$url</span> <span class="o">=</span> <span class="s2">"https://api.izi.credit/v1/th_ocr/general"</span><span class="p">;</span>
+<span class="nv">$data</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s2">"img"</span><span class="o">=&gt;</span><span class="s2">"BASE64_ENCODE_VALUE"</span><span class="p">);</span>
+<span class="nv">$response</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="na">request</span><span class="p">(</span><span class="nv">$url</span><span class="p">,</span> <span class="nv">$data</span><span class="p">);</span>
+<span class="k">print</span><span class="p">(</span><span class="nv">$response</span><span class="p">);</span>
+</code></pre><pre class="highlight java tab-java"><code><span class="kn">import</span> <span class="nn">java.util.HashMap</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Map</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">credit.izi.Client</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainClass</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">Client</span> <span class="n">api</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Client</span><span class="o">(</span><span class="s">"YOUR_ACCESS_KEY"</span><span class="o">,</span> <span class="s">"YOUR_SECRET_KEY"</span><span class="o">);</span>
+        <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">data</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;&gt;();</span>
+        <span class="n">data</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"img"</span><span class="o">,</span> <span class="s">"BASE64_ENCODE_VALUE"</span><span class="o">);</span>
+        <span class="n">String</span> <span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.izi.credit/v1/th_ocr/general"</span><span class="o">;</span>
+        <span class="n">String</span> <span class="n">response</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="na">Request</span><span class="o">(</span><span class="n">url</span><span class="o">,</span> <span class="n">data</span><span class="o">);</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">response</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre><pre class="highlight go tab-go"><code><span class="k">package</span><span class="x"> </span><span class="n">main</span><span class="x">
+
+</span><span class="k">import</span><span class="x"> </span><span class="p">(</span><span class="x">
+    </span><span class="s">"fmt"</span><span class="x">
+    </span><span class="s">"github.com/izisdk/gosdk"</span><span class="x">
+</span><span class="p">)</span><span class="x">
+
+</span><span class="k">func</span><span class="x"> </span><span class="n">main</span><span class="p">()</span><span class="x"> </span><span class="p">{</span><span class="x">
+    </span><span class="n">api</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">gosdk</span><span class="o">.</span><span class="n">NewClient</span><span class="p">(</span><span class="s">"YOUR_ACCESS_KEY"</span><span class="p">,</span><span class="x"> </span><span class="s">"YOUR_SECRET_KEY"</span><span class="p">)</span><span class="x">
+    </span><span class="n">data</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="k">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">string</span><span class="p">{</span><span class="x">
+        </span><span class="s">"img"</span><span class="o">:</span><span class="x"> </span><span class="s">"BASE64_ENCODE_VALUE"</span><span class="p">,</span><span class="x">
+    </span><span class="p">}</span><span class="x">
+    </span><span class="n">url</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="s">"https://api.izi.credit/v1/th_ocr/general"</span><span class="x">
+    </span><span class="n">response</span><span class="p">,</span><span class="x"> </span><span class="n">_</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">api</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="n">url</span><span class="p">,</span><span class="x"> </span><span class="n">data</span><span class="p">)</span><span class="x">
+    </span><span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">response</span><span class="p">)</span><span class="x">
+</span><span class="p">}</span><span class="x">
+</span></code></pre>
+<blockquote>
+<p>Response for recognition success</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="s2">"OK"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"message"</span><span class="p">:{</span><span class="w">
+        </span><span class="s2">"cardTypeTh"</span><span class="p">:</span><span class="s2">"บัตรประจำตัวประชาชน"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"cardTypeEn"</span><span class="p">:</span><span class="s2">"Thai National ID Card"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"idNumber"</span><span class="p">:</span><span class="s2">"1842356782169"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"serialNumber"</span><span class="p">:</span><span class="s2">"8407-03-22251350"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"nameTh"</span><span class="p">:</span><span class="s2">"น.ส.  พรนภา ยิ่งเภตรา"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"nameEn"</span><span class="p">:</span><span class="s2">"Miss. Ponnapa"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"lastNameEn"</span><span class="p">:</span><span class="s2">"Yinthpetra"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"birthTh"</span><span class="p">:</span><span class="s2">"29 ม.ค. 2540"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"birthEn"</span><span class="p">:</span><span class="s2">"29 Jan. 1997"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"issueDateEN"</span><span class="p">:</span><span class="s2">"12 Apr. 2017"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"issueDateTH"</span><span class="p">:</span><span class="s2">"12 เม.ย. 2560"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"expiryDateEN"</span><span class="p">:</span><span class="s2">"22 Jun. 2025"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"expiryDateTH"</span><span class="p">:</span><span class="s2">"22 มิ.ย. 2568"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"religion"</span><span class="p">:</span><span class="s2">"พุทธ"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"address"</span><span class="p">:</span><span class="s2">"ที่อยู่ 125 หมู่ที่ 7 ต.ช้างขวา อ.กาญจนดิษฐ์"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Response for recognition fail</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FAIL"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"check input image and retry"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Response for recognition id or name fail</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"IMAGE_RECOGNIZE_ERROR"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"no id or name found"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Response for invalid request parameters</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"INVALID_REQUEST"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"check request params"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Response for invalid image format</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"IMAGE_INVALID_FORMAT"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"image format not support"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Response for image size larger than 2M</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"IMAGE_INVALID_SIZE"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"image larger than 2M"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Response for server error</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"RETRY_LATER"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Service is not available right now, please try again later"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-7'>HTTP request</h3>
+<p><code>POST https://api.izi.credit/v1/th_ocr/general</code></p>
+<h3 id='request-parameters-7'>Request parameters</h3>
+<table><thead>
+<tr>
+<th>parameter</th>
+<th>description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>img</code></td>
+<td><code>string</code>, base64 encoded image</td>
+</tr>
+</tbody></table>
+<h3 id='response-format-8'>Response format</h3>
+<table><thead>
+<tr>
+<th>fields</th>
+<th>description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>status</code></td>
+<td>status code</td>
+</tr>
+<tr>
+<td><code>message</code></td>
+<td><code>cardTypeTh</code>: th card type</td>
+</tr>
+<tr>
+<td></td>
+<td><code>cardTypeEn</code>：en card type</td>
+</tr>
+<tr>
+<td></td>
+<td><code>idNumber</code>: id number</td>
+</tr>
+<tr>
+<td></td>
+<td><code>serialNumber</code>: serial number</td>
+</tr>
+<tr>
+<td></td>
+<td><code>nameTh</code>: name</td>
+</tr>
+<tr>
+<td></td>
+<td><code>nameEn</code>: name</td>
+</tr>
+<tr>
+<td></td>
+<td><code>lastNameEn</code>: last name of En</td>
+</tr>
+<tr>
+<td></td>
+<td><code>birthTh</code>: birth day of th</td>
+</tr>
+<tr>
+<td></td>
+<td><code>birthEn</code>: birth day of en</td>
+</tr>
+<tr>
+<td></td>
+<td><code>issueDateEN</code>: en issuse date</td>
+</tr>
+<tr>
+<td></td>
+<td><code>issueDateTH</code>: th issue date</td>
+</tr>
+<tr>
+<td></td>
+<td><code>expiryDateEN</code>: expiry date</td>
+</tr>
+<tr>
+<td></td>
+<td><code>expiryDateTH</code>: expiry date</td>
+</tr>
+<tr>
+<td></td>
+<td><code>religion</code>: religion</td>
+</tr>
+<tr>
+<td></td>
+<td><code>address</code>: address</td>
+</tr>
+</tbody></table>
+<h3 id='status-code-8'>Status code</h3>
+<table><thead>
+<tr>
+<th>status</th>
+<th>description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>OK</code></td>
+<td><code>charge</code>, success</td>
+</tr>
+<tr>
+<td><code>FAIL</code></td>
+<td><code>free</code>, image recognition error, please check input image</td>
+</tr>
+<tr>
+<td><code>IMAGE_RECOGNIZE_ERROR</code></td>
+<td><code>free</code>, image recognition error</td>
+</tr>
+<tr>
+<td><code>INVALID_REQUEST</code></td>
+<td><code>free</code>, invalid request parameters</td>
+</tr>
+<tr>
+<td><code>IMAGE_INVALID_FORMAT</code></td>
+<td><code>free</code>, invalid image format, image format should be one of jpeg/jpg/png/bmp</td>
+</tr>
+<tr>
+<td><code>IMAGE_INVALID_SIZE</code></td>
+<td><code>free</code>, invalid image size, should be less than 2M</td>
+</tr>
+<tr>
+<td><code>RETRY_LATER</code></td>
+<td><code>free</code>, server error</td>
+</tr>
+</tbody></table>
+<h1 id='thailand-driver-39-s-license-ocr'>Thailand Driver&#39;s License OCR</h1>
+<p>license number + name recognition + id number</p>
+
+<blockquote>
+<p>Code example:</p>
+</blockquote>
+<pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">izi</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="n">izi</span><span class="o">.</span><span class="n">client</span><span class="p">(</span><span class="s">'YOUR_ACCESS_KEY'</span><span class="p">,</span> <span class="s">'YOUR_SECRET_KEY'</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s">"img"</span><span class="p">:</span> <span class="s">"BASE64_ENCODE_VALUE"</span><span class="p">}</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.izi.credit/v1/th_ocr/general"</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</code></pre><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
+<span class="k">require_once</span> <span class="s2">"izi/IziClient.php"</span><span class="p">;</span>
+
+<span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">IziClient</span><span class="p">(</span><span class="s2">"YOUR_ACCESS_KEY"</span><span class="p">,</span> <span class="s2">"YOUR_SECRET_KEY"</span><span class="p">);</span>
+<span class="nv">$url</span> <span class="o">=</span> <span class="s2">"https://api.izi.credit/v1/th_ocr/general"</span><span class="p">;</span>
+<span class="nv">$data</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s2">"img"</span><span class="o">=&gt;</span><span class="s2">"BASE64_ENCODE_VALUE"</span><span class="p">);</span>
+<span class="nv">$response</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="na">request</span><span class="p">(</span><span class="nv">$url</span><span class="p">,</span> <span class="nv">$data</span><span class="p">);</span>
+<span class="k">print</span><span class="p">(</span><span class="nv">$response</span><span class="p">);</span>
+</code></pre><pre class="highlight java tab-java"><code><span class="kn">import</span> <span class="nn">java.util.HashMap</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Map</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">credit.izi.Client</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainClass</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">Client</span> <span class="n">api</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Client</span><span class="o">(</span><span class="s">"YOUR_ACCESS_KEY"</span><span class="o">,</span> <span class="s">"YOUR_SECRET_KEY"</span><span class="o">);</span>
+        <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">data</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;&gt;();</span>
+        <span class="n">data</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"img"</span><span class="o">,</span> <span class="s">"BASE64_ENCODE_VALUE"</span><span class="o">);</span>
+        <span class="n">String</span> <span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.izi.credit/v1/th_ocr/general"</span><span class="o">;</span>
+        <span class="n">String</span> <span class="n">response</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="na">Request</span><span class="o">(</span><span class="n">url</span><span class="o">,</span> <span class="n">data</span><span class="o">);</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">response</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre><pre class="highlight go tab-go"><code><span class="k">package</span><span class="x"> </span><span class="n">main</span><span class="x">
+
+</span><span class="k">import</span><span class="x"> </span><span class="p">(</span><span class="x">
+    </span><span class="s">"fmt"</span><span class="x">
+    </span><span class="s">"github.com/izisdk/gosdk"</span><span class="x">
+</span><span class="p">)</span><span class="x">
+
+</span><span class="k">func</span><span class="x"> </span><span class="n">main</span><span class="p">()</span><span class="x"> </span><span class="p">{</span><span class="x">
+    </span><span class="n">api</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">gosdk</span><span class="o">.</span><span class="n">NewClient</span><span class="p">(</span><span class="s">"YOUR_ACCESS_KEY"</span><span class="p">,</span><span class="x"> </span><span class="s">"YOUR_SECRET_KEY"</span><span class="p">)</span><span class="x">
+    </span><span class="n">data</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="k">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">string</span><span class="p">{</span><span class="x">
+        </span><span class="s">"img"</span><span class="o">:</span><span class="x"> </span><span class="s">"BASE64_ENCODE_VALUE"</span><span class="p">,</span><span class="x">
+    </span><span class="p">}</span><span class="x">
+    </span><span class="n">url</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="s">"https://api.izi.credit/v1/th_ocr/general"</span><span class="x">
+    </span><span class="n">response</span><span class="p">,</span><span class="x"> </span><span class="n">_</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">api</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="n">url</span><span class="p">,</span><span class="x"> </span><span class="n">data</span><span class="p">)</span><span class="x">
+    </span><span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">response</span><span class="p">)</span><span class="x">
+</span><span class="p">}</span><span class="x">
+</span></code></pre>
+<blockquote>
+<p>Response for recognition success</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="s2">"OK"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"message"</span><span class="p">:{</span><span class="w">
+        </span><span class="s2">"cardTypeTh"</span><span class="p">:</span><span class="s2">"ใบอนุญาตขับรถ"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"cardTypeEn"</span><span class="p">:</span><span class="s2">"Driving License"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"licenseNumber"</span><span class="p">:</span><span class="s2">"61002614"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"idNumber"</span><span class="p">:</span><span class="s2">"1102652247328"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"nameTh"</span><span class="p">:</span><span class="s2">"นาย  อนิรุต ทองรักอยู่"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"nameEn"</span><span class="p">:</span><span class="s2">"MR. ANIRUT THONGRAKYU"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"birthTh"</span><span class="p">:</span><span class="s2">"27 พฤษภาคม 2538"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"birthEn"</span><span class="p">:</span><span class="s2">"27 May 1995"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"issueDate"</span><span class="p">:</span><span class="s2">"24 December 2018"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"expiryDate"</span><span class="p">:</span><span class="s2">"24 December 2020"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Response for recognition fail</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FAIL"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"check input image and retry"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Response for recognition fail</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"IMAGE_RECOGNIZE_ERROR"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"no number or name found"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Response for invalid request parameters</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"INVALID_REQUEST"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"check request params"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Response for invalid image format</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"IMAGE_INVALID_FORMAT"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"image format not support"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Response for image size larger than 2M</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"IMAGE_INVALID_SIZE"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"image larger than 2M"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Response for server error</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"RETRY_LATER"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Service is not available right now, please try again later"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-8'>HTTP request</h3>
+<p><code>POST https://api.izi.credit/v1/th_ocr/general</code></p>
+<h3 id='request-parameters-8'>Request parameters</h3>
+<table><thead>
+<tr>
+<th>parameter</th>
+<th>description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>img</code></td>
+<td><code>string</code>, base64 encoded image</td>
+</tr>
+</tbody></table>
+<h3 id='response-format-9'>Response format</h3>
+<table><thead>
+<tr>
+<th>fields</th>
+<th>description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>status</code></td>
+<td>status code</td>
+</tr>
+<tr>
+<td><code>message</code></td>
+<td><code>cardTypeTh</code>: th card type</td>
+</tr>
+<tr>
+<td></td>
+<td><code>cardTypeEn</code>：en card type</td>
+</tr>
+<tr>
+<td></td>
+<td><code>licenseNumber</code>: license number</td>
+</tr>
+<tr>
+<td></td>
+<td><code>idNumber</code>: id number</td>
+</tr>
+<tr>
+<td></td>
+<td><code>nameTH</code>: th name</td>
+</tr>
+<tr>
+<td></td>
+<td><code>nameEn</code>: en name</td>
+</tr>
+<tr>
+<td></td>
+<td><code>birthTh</code>: birth day of th</td>
+</tr>
+<tr>
+<td></td>
+<td><code>birthEn</code>: birth day of en</td>
+</tr>
+<tr>
+<td></td>
+<td><code>issueDate</code>: issuse date</td>
+</tr>
+<tr>
+<td></td>
+<td><code>expiryDate</code>: expiry date</td>
+</tr>
+</tbody></table>
+<h3 id='status-code-9'>Status code</h3>
+<table><thead>
+<tr>
+<th>status</th>
+<th>description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>OK</code></td>
+<td><code>charge</code>, success</td>
+</tr>
+<tr>
+<td><code>FAIL</code></td>
+<td><code>free</code>, image recognition error, please check input image</td>
+</tr>
+<tr>
+<td><code>IMAGE_RECOGNIZE_ERROR</code></td>
+<td><code>free</code>, image recognition error</td>
+</tr>
+<tr>
+<td><code>INVALID_REQUEST</code></td>
+<td><code>free</code>, invalid request parameters</td>
+</tr>
+<tr>
+<td><code>IMAGE_INVALID_FORMAT</code></td>
+<td><code>free</code>, invalid image format, image format should be one of jpeg/jpg/png/bmp</td>
+</tr>
+<tr>
+<td><code>IMAGE_INVALID_SIZE</code></td>
+<td><code>free</code>, invalid image size, should be less than 2M</td>
+</tr>
+<tr>
+<td><code>RETRY_LATER</code></td>
+<td><code>free</code>, server error</td>
 </tr>
 </tbody></table>
 
