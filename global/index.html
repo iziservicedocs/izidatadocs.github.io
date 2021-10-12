@@ -362,6 +362,9 @@
                     <a href="#request-parameters-7" class="toc-h2 toc-link" data-title="Request parameters">Request parameters</a>
                   </li>
                   <li>
+                    <a href="#response-format-8" class="toc-h2 toc-link" data-title="Response format">Response format</a>
+                  </li>
+                  <li>
                     <a href="#status-code-8" class="toc-h2 toc-link" data-title="Status code">Status code</a>
                   </li>
               </ul>
@@ -376,7 +379,7 @@
                     <a href="#request-parameters-8" class="toc-h2 toc-link" data-title="Request parameters">Request parameters</a>
                   </li>
                   <li>
-                    <a href="#response-format-8" class="toc-h2 toc-link" data-title="Response format">Response format</a>
+                    <a href="#response-format-9" class="toc-h2 toc-link" data-title="Response format">Response format</a>
                   </li>
                   <li>
                     <a href="#status-code-9" class="toc-h2 toc-link" data-title="Status code">Status code</a>
@@ -1569,6 +1572,30 @@ Please make sure to replace <code>YOUR_ACCESS_KEY</code> and <code>YOUR_SECRET_K
 </span><span class="p">}</span><span class="x">
 </span></code></pre>
 <blockquote>
+<p>Response for recognition success</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="s2">"OK"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"message"</span><span class="p">:{</span><span class="w">
+        </span><span class="s2">"cardTypeTh"</span><span class="p">:</span><span class="s2">"บัตรประจำตัวประชาชน"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"cardTypeEn"</span><span class="p">:</span><span class="s2">"Thai National ID Card"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"idNumber"</span><span class="p">:</span><span class="s2">"1842356782169"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"serialNumber"</span><span class="p">:</span><span class="s2">"8407-03-22251350"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"nameTh"</span><span class="p">:</span><span class="s2">"น.ส.  พรนภา ยิ่งเภตรา"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"nameEn"</span><span class="p">:</span><span class="s2">"Miss. Ponnapa"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"lastNameEn"</span><span class="p">:</span><span class="s2">"Yinthpetra"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"birthTh"</span><span class="p">:</span><span class="s2">"29 ม.ค. 2540"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"birthEn"</span><span class="p">:</span><span class="s2">"29 Jan. 1997"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"issueDateEN"</span><span class="p">:</span><span class="s2">"12 Apr. 2017"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"issueDateTH"</span><span class="p">:</span><span class="s2">"12 เม.ย. 2560"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"expiryDateEN"</span><span class="p">:</span><span class="s2">"22 Jun. 2025"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"expiryDateTH"</span><span class="p">:</span><span class="s2">"22 มิ.ย. 2568"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"religion"</span><span class="p">:</span><span class="s2">"พุทธ"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"address"</span><span class="p">:</span><span class="s2">"ที่อยู่ 125 หมู่ที่ 7 ต.ช้างขวา อ.กาญจนดิษฐ์"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
 <p>Response for recognition fail</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
@@ -1627,6 +1654,78 @@ Please make sure to replace <code>YOUR_ACCESS_KEY</code> and <code>YOUR_SECRET_K
 <tr>
 <td><code>img</code></td>
 <td><code>string</code>, base64 encoded image</td>
+</tr>
+</tbody></table>
+<h3 id='response-format-8'>Response format</h3>
+<table><thead>
+<tr>
+<th>fields</th>
+<th>description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>status</code></td>
+<td>status code</td>
+</tr>
+<tr>
+<td><code>message</code></td>
+<td><code>cardTypeTh</code>: th card type</td>
+</tr>
+<tr>
+<td></td>
+<td><code>cardTypeEn</code>：en card type</td>
+</tr>
+<tr>
+<td></td>
+<td><code>idNumber</code>: id number</td>
+</tr>
+<tr>
+<td></td>
+<td><code>serialNumber</code>: serial number</td>
+</tr>
+<tr>
+<td></td>
+<td><code>nameTh</code>: name</td>
+</tr>
+<tr>
+<td></td>
+<td><code>nameEn</code>: name</td>
+</tr>
+<tr>
+<td></td>
+<td><code>lastNameEn</code>: last name of En</td>
+</tr>
+<tr>
+<td></td>
+<td><code>birthTh</code>: birth day of th</td>
+</tr>
+<tr>
+<td></td>
+<td><code>birthEn</code>: birth day of en</td>
+</tr>
+<tr>
+<td></td>
+<td><code>issueDateEN</code>: en issuse date</td>
+</tr>
+<tr>
+<td></td>
+<td><code>issueDateTH</code>: th issue date</td>
+</tr>
+<tr>
+<td></td>
+<td><code>expiryDateEN</code>: expiry date</td>
+</tr>
+<tr>
+<td></td>
+<td><code>expiryDateTH</code>: expiry date</td>
+</tr>
+<tr>
+<td></td>
+<td><code>religion</code>: religion</td>
+</tr>
+<tr>
+<td></td>
+<td><code>address</code>: address</td>
 </tr>
 </tbody></table>
 <h3 id='status-code-8'>Status code</h3>
@@ -1797,7 +1896,7 @@ Please make sure to replace <code>YOUR_ACCESS_KEY</code> and <code>YOUR_SECRET_K
 <td><code>string</code>, base64 encoded image</td>
 </tr>
 </tbody></table>
-<h3 id='response-format-8'>Response format</h3>
+<h3 id='response-format-9'>Response format</h3>
 <table><thead>
 <tr>
 <th>fields</th>
